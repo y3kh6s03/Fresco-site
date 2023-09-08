@@ -7,7 +7,7 @@
         display: inline-block;
         width: 180px;
         height: 33px;
-        background-image: url(/logo/logo-2.png);
+        background-image: url(/images/logo/logo-2.png);
         background-size: contain;
         background-repeat: no-repeat;
         @extend .mb-md;
@@ -45,7 +45,7 @@
 
     &::before{
         content: "";
-        background-image: url(/noise.png);
+        background-image: url(/images/noise.png);
         width: 300%;
         position: fixed;
         top: 0;
