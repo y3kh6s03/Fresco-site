@@ -14,26 +14,26 @@ $cBlue: #AACBD0;
 // font-size
 /////////////////////////////////////
 
-.font-sm{
+.font-sm {
     font-size: 10px;
 
-    @include mq(lg){
+    @include mq(lg) {
         font-size: 12px;
     }
 }
 
-.font-md{
+.font-md {
     font-size: 14px;
 
-    @include mq(lg){
+    @include mq(lg) {
         font-size: 15px;
     }
 }
 
-.font-lg{
+.font-lg {
     font-size: 20px;
 
-    @include mq(lg){
+    @include mq(lg) {
         font-size: 25px;
     }
 }
@@ -42,17 +42,18 @@ $cBlue: #AACBD0;
 /////////////////////////////////////
 // margin bottom
 /////////////////////////////////////
-.mb-sm{
+.mb-sm {
     margin-bottom: 20px;
 }
-.mb-md{
+
+.mb-md {
     margin-bottom: 50px;
 }
 
 /////////////////////////////////////
 // Base setting
 /////////////////////////////////////
-*{
+* {
     @extend .font-md;
     margin: 0;
     padding: 0;
@@ -61,7 +62,7 @@ $cBlue: #AACBD0;
     line-height: 1.6;
 }
 
-body{
+body {
     width: 100vw;
 
     &:after {
@@ -72,34 +73,24 @@ body{
         width: 100%;
         height: 100%;
         content: "";
-        background: red;
         background: linear-gradient(326deg, rgba(255, 245, 226, 1) 33%, rgba(255, 255, 255, 1) 76%, rgba(255, 255, 255, 1) 100%);
     }
 }
 
-.body__wrapper{
+.body__wrapper {
     max-width: 1440px;
     overflow: hidden;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.container{
+.container {
     width: 100%;
     padding: 0 5%;
 }
-
-
-
-
-
-
-
-
-

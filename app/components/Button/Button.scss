@@ -1,0 +1,123 @@
+@use "styles/_globals.scss" as *;
+
+.lgbutton {
+    width: 250px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__name {
+        @extend .font-lg;
+        line-height: 50px;
+    }
+
+    &__holizon {
+        display: block;
+        width: 250px;
+        height: 1px;
+        background-color: $cBlack;
+        position: absolute;
+        bottom: 5px;
+        transform: scaleX(10%);
+        transform-origin: left;
+        animation: holizonOutAnima 1.8s forwards cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    &__arrow {
+        width: 20px;
+        position: relative;
+
+        &::before,
+        &::after {
+            display: inline-block;
+            content: "";
+            width: 10px;
+            height: 1px;
+            background-color: $cBlack;
+            position: absolute;
+        }
+
+        &::before {
+            transform: rotate(40deg);
+            top: calc(50% - 8px);
+            right: 0;
+        }
+
+        &::after {
+            transform: rotate(325deg);
+            bottom: calc(50% + .5px);
+            right: 0;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        & span {
+            display: inline-block;
+            transform: translateY(-100%);
+            transition: all 1s 1s cubic-bezier(0.83, 0, 0.17, 1);
+        }
+    }
+
+    &:hover {
+        & .lgbutton__holizon {
+            animation: holizonHoverAnima 1.8s forwards cubic-bezier(0.83, 0, 0.17, 1);
+        }
+
+        & .lgbutton__text {
+            & span {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @keyframes holizonHoverAnima {
+        0% {
+            transform: scaleX(10%);
+        }
+
+        50% {
+            transform: scaleX(100%);
+            transform-origin: left;
+
+        }
+
+        51% {
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+
+        100% {
+            transform: scaleX(43%);
+            transform-origin: right;
+        }
+    }
+    @keyframes holizonOutAnima {
+
+        0% {
+            transform: scaleX(43%);
+            transform-origin: right;
+        }
+
+        50% {
+            transform: scaleX(100%);
+            transform-origin: right;
+        }
+
+        51% {
+            transform: scaleX(100%);
+            transform-origin: left;
+
+        }
+        100% {
+            transform: scaleX(10%);
+        }
+    }
+
+}
