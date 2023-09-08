@@ -1,0 +1,105 @@
+@forward "styles/_mq.scss";
+@use "styles/_mq.scss" as *;
+
+/////////////////////////////////////
+//　color
+/////////////////////////////////////
+$cBlack: #333333;
+$cGreen: #839C96;
+$cOrange: #E1B58B;
+$cBcc: #F4F2E0;
+$cBlue: #AACBD0;
+
+/////////////////////////////////////
+// font-size
+/////////////////////////////////////
+
+.font-sm{
+    font-size: 10px;
+
+    @include mq(lg){
+        font-size: 12px;
+    }
+}
+
+.font-md{
+    font-size: 14px;
+
+    @include mq(lg){
+        font-size: 15px;
+    }
+}
+
+.font-lg{
+    font-size: 20px;
+
+    @include mq(lg){
+        font-size: 25px;
+    }
+}
+
+
+/////////////////////////////////////
+// margin bottom
+/////////////////////////////////////
+.mb-sm{
+    margin-bottom: 20px;
+}
+.mb-md{
+    margin-bottom: 50px;
+}
+
+/////////////////////////////////////
+// Base setting
+/////////////////////////////////////
+*{
+    @extend .font-md;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $cBlack;
+    line-height: 1.6;
+}
+
+body{
+    width: 100vw;
+
+    &:after {
+        z-index: -100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: red;
+        background: linear-gradient(326deg, rgba(255, 245, 226, 1) 33%, rgba(255, 255, 255, 1) 76%, rgba(255, 255, 255, 1) 100%);
+    }
+}
+
+.body__wrapper{
+    max-width: 1440px;
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    padding: 0 5%;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Home",
+        "jaTitle": "ホーム",
+        "url": "#"
+    },
+    {
+        "title": "About",
+        "jaTitle": "フレスコ・カンパニーについて",
+        "url": "#"
+    },
+    {
+        "title": "Service",
+        "jaTitle": "わたしたちの事業",
+        "url": "#"
+    },
+    {
+        "title": "Works",
+        "jaTitle": "私たちの実績",
+        "url": "#"
+    },
+    {
+        "title": "SNS",
+        "jaTitle": "私たちの活動",
+        "url": "#"
+    },
+    {
+        "title": "Recruit",
+        "jaTitle": "採用情報",
+        "url": "#"
+    },
+    {
+        "title": "Contact",
+        "jaTitle": "お問い合わせ",
+        "url": "#"
+    }
+]

@@ -1,0 +1,124 @@
+@use "styles/_globals.scss" as *;
+
+.header {
+    width: 100vw;
+    height: 60px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: inline-block;
+        width: 180px;
+        height: 33px;
+        background-image: url(/logo/logo-2.png);
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+
+    &__menu__icon {
+        width: 35px;
+        height: 35px;
+        // background-color: $cOrange;
+        position: relative;
+        z-index: 100;
+
+        & span {
+            width: 30px;
+            height: 1px;
+            background-color: $cBlack;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: transform 1s;
+            mix-blend-mode: darken;
+
+            &:nth-child(1) {
+                transform: translate(-50%, 2px);
+            }
+
+            &:nth-child(2) {
+                transform: translate(-50%, -2px);
+            }
+        }
+    }
+}
+
+.header__nav {
+    width: 75vw;
+    height: 100vh;
+    padding: 60px 50px;
+    background-color: $cOrange;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+
+
+    & p {
+        color: white;
+        @extend .font-md;
+        @extend .mb-md;
+        position: relative;
+
+        &::before{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            position: absolute;
+            bottom: 0
+        }
+
+    }
+
+
+    &__li {
+        @extend .mb-sm;
+
+        & a {
+            @extend .font-lg;
+            color: white;
+            line-height: 1.3;
+
+        }
+
+        & span {
+            display: block;
+            color: white;
+            @extend .font-sm;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 200px;
+        height: 37px;
+        background-image: url(/logo/logo-2.png);
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+}
+
+
+// メニューアイコンがクリックされたとき
+.isOpen {
+    &.header__menu__icon {
+        & span {
+            &:nth-child(1) {
+                transform: translate(-50%, 0px) rotate(-10deg);
+            }
+
+            &:nth-child(2) {
+                transform: translate(-50%, 0px) rotate(370deg);
+            }
+        }
+    }
+
+    &.header__nav{
+        transform: translateX(0);
+    }
+}
