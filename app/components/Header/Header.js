@@ -30,7 +30,7 @@ export const Header = () => {
 
             <nav className={`header__nav ${isOpen ? "isOpen" : ""}`}>
                 <p>
-                    Navigation3
+                    Navigation
                 </p>
                 <ul className="header__nav__ul">
                     {

@@ -38,6 +38,14 @@ $cBlue: #AACBD0;
     }
 }
 
+.font-xxl {
+    font-size: 40px;
+    line-height: 1.2;
+
+    @include mq(lg) {
+        font-size: 25px;
+    }
+}
 
 /////////////////////////////////////
 // margin bottom

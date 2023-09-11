@@ -18,7 +18,7 @@
         height: 100px;
         background-image: url(/images/logo/logo-1.png);
         background-size: contain;
-        background-repeat: no-repeat
+        background-repeat: no-repeat;
     }
 
     &__menu__icon {
@@ -31,6 +31,7 @@
             width: 35px;
             height: 1px;
             background-color: $cBlack;
+            mix-blend-mode: difference;
             display: inline-block;
             position: absolute;
             top: 50%;
@@ -50,13 +51,14 @@
 }
 
 .header__nav {
-    width: 75vw;
+    width: 70vw;
     height: 100vh;
-    padding: 60px 50px;
+    padding: 60px 30px;
     background-color: $cOrange;
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 99;
     transform: translateX(100%);
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 

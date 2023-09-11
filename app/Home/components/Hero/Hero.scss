@@ -1,0 +1,176 @@
+@use "styles/_globals.scss" as *;
+
+.hero {
+    padding: 0 5%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/Hero/meal.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $cBlack;
+        opacity: .3;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__title {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+
+        &__inner {
+            clip-path: polygon(0 0, 120% 0, 120% 100%, 0 100%);
+
+            & h1 {
+                @extend .font-xxl;
+                color: white;
+                margin-bottom: 5px;
+                transform: translateY(100%);
+                animation: loadingAnimationTitle 1s .3s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+            }
+
+            @keyframes loadingAnimationTitle {
+                0% {
+                    transform: translateY(100%);
+                }
+                100% {
+                    transform: translateY(0%);
+                }
+            }
+
+            &__span{
+                display: block;
+                color: white;
+                position: relative;
+                @extend .font-md;
+            }
+
+            &__line {
+                display: block;
+                width: 120%;
+                height: 1px;
+                background-color: white;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                transform-origin: right;
+                animation: loadingAnimationBar 2s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+            }
+
+            @keyframes loadingAnimationBar {
+                0% {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+                50%{
+                    transform: scaleX(1);
+                    transform-origin: right;
+                }
+                51%{
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+
+                100% {
+                    transform: scaleX(.1);
+                    transform-origin: left;
+                }
+            }
+        }
+
+        &__span {
+            display: block;
+            color: white;
+            position: relative;
+            @extend .font-md;
+            transform: translateX(50px);
+            opacity: 0;
+            animation: loadingAnimationDescription 1s 1s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+        }
+
+        @keyframes loadingAnimationDescription {
+            0% {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 80%;
+
+
+        & a {
+            @extend .mb-sm;
+            padding-left: 5%;
+            position: relative;
+
+
+            & span {
+                color: white;
+                display: block;
+
+                &:nth-child(1) {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 50px;
+                    width: 1px;
+                    background-color: white;
+                }
+
+                &:nth-child(2) {
+                    @extend .font-md;
+                }
+
+                &:nth-child(3) {
+                    @extend .font-sm;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        &__ul {}
+
+        &__li {
+            & a {}
+        }
+    }
+
+
+
+}
+
+.loading {
+    .hero__title {
+        &__inner {
+            & h1 {
+                // transform: translate(0);
+
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: right;
+                    transition: all 1s cubic-bezier(0.83, 0, 0.17, 1);
+                }
+            }
+        }
+    }
+}
