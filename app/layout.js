@@ -35,12 +35,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-      <body className={`${noto_jp.className} ${noto.variable} ${numFont.variable}`}>
-        {/* <div className="body__wrapper"> */}
-          {/* <Header /> */}
+      <body className={`${noto_jp.className} ${noto.className} ${numFont.variable}`}>
+        <div className="body__wrapper">
+          <Header />
           {children}
-          {/* <Footer /> */}
-        {/* </div> */}
+          <Footer />
+        </div>
       </body>
     </html>
   )
