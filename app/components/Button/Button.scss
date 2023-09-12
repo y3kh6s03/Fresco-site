@@ -1,7 +1,7 @@
 @use "styles/_globals.scss" as *;
 
 .lgbutton {
-    width: 250px;
+    width: 200px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@
 
     &__holizon {
         display: block;
-        width: 250px;
+        width: 200px;
         height: 1px;
         background-color: $cBlack;
         position: absolute;
@@ -40,13 +40,13 @@
 
         &::before {
             transform: rotate(40deg);
-            top: calc(50% - 8px);
+            top: calc(50% - 3px);
             right: 0;
         }
 
         &::after {
             transform: rotate(325deg);
-            bottom: calc(50% + .5px);
+            bottom: calc(50% - 3.5px);
             right: 0;
         }
     }
@@ -94,7 +94,7 @@
         }
 
         100% {
-            transform: scaleX(43%);
+            transform: scaleX(48%);
             transform-origin: right;
         }
     }

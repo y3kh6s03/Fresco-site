@@ -40,6 +40,26 @@ $cBlue: #AACBD0;
     @include mq(md) {
         font-size: 25px;
     }
+    @include mq(lg) {
+        font-size: 36px;
+    }
+    @include mq(xl) {
+        font-size: 42px;
+    }
+}
+
+.font-xl {
+    font-size: 30px;
+
+    @include mq(md) {
+        font-size: 36px;
+    }
+    @include mq(lg) {
+        font-size: 42px;
+    }
+    @include mq(xl) {
+        font-size: 60px;
+    }
 }
 
 .font-xxl {
@@ -68,6 +88,9 @@ $cBlue: #AACBD0;
     margin-bottom: 50px;
 }
 
+.mb-lg {
+    margin-bottom: 100px;
+}
 /////////////////////////////////////
 // Base setting
 /////////////////////////////////////
@@ -99,6 +122,12 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 5%;
 }
 
 li {
