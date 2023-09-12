@@ -1,0 +1,16 @@
+@use "styles/_globals.scss" as *;
+
+
+.homeFuture {
+    height: 100vh;
+    &__title {
+        &__h2 {}
+        &__span {}
+    }
+
+    &__description {
+        &__headline {}
+        &__p {}
+    }
+
+}

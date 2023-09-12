@@ -9,16 +9,15 @@
     &__title {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         @extend .mb-md;
 
         &__h2 {
-            flex: 1;
             @extend .font-xl;
             position: relative;
 
             @include mq(lg){
-                margin-left: 40%;
-                transform: translateX(-50%);
+                margin-left: 15%;
 
             }
 
@@ -49,10 +48,17 @@
 
 
         &__image {
-            flex: 1;
             background-image: url(/images/Hero/catering2.jpg);
             background-size: cover;
+            width: 50%;
             height: 50vh;
+
+            @include mq(lg){
+                width: 40%;
+            }
+            @include mq(xl){
+                width: 30%;
+            }
         }
     }
 
