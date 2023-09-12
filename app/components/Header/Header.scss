@@ -2,11 +2,14 @@
 
 .header {
     width: 100vw;
+    max-width: 1440px;
     height: 130px;
     padding: 0 5%;
+    margin: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
