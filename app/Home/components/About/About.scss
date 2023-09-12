@@ -1,0 +1,133 @@
+@use "styles/_globals.scss" as *;
+
+.homeAbout {
+    width: 100vw;
+    max-width: 1440px;
+    padding-top: 100px;
+    padding-left: 5%;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        @extend .mb-md;
+
+        &__h2 {
+            flex: 1;
+            @extend .font-xl;
+            position: relative;
+
+            @include mq(lg){
+                margin-left: 40%;
+                transform: translateX(-50%);
+
+            }
+
+            &::before {
+                content: "";
+                width: 10%;
+                height: 1px;
+                position: absolute;
+                bottom: 36%;
+                left: 0;
+                background-color: $cBlack;
+
+                @include mq(md){
+                    bottom: 30%;
+                }
+                @include mq(xl){
+                    bottom: 25%;
+                }
+            }
+
+            &__span {
+                display: block;
+                @extend .font-sm;
+
+            }
+        }
+
+
+
+        &__image {
+            flex: 1;
+            background-image: url(/images/Hero/catering2.jpg);
+            background-size: cover;
+            height: 50vh;
+        }
+    }
+
+    &__description {
+        position: relative;
+        padding-right: 5%;
+
+        &__p {
+            @extend .mb-sm;
+
+            @include mq(md){
+                width: 45vw;
+                margin-left: calc(100% - 50vw);
+            }
+            @include mq(lg){
+                width: 40vw;
+                margin-left: calc(90% - 50vw);
+            }
+        }
+
+        & .lgbutton {
+            left: 100%;
+            @extend .mb-md;
+            transform: translateX(-100%);
+        }
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__image1 {
+            background-image: url(/images/Hero/slide_004.png);
+            background-size: cover;
+            background-position: right;
+            width: 37vw;
+            height: 40vh;
+            margin-left: -6%;
+
+            @include mq(md) {
+                width: 25vw;
+                height: 30vh;
+                position: absolute;
+                top: 0;
+            }
+
+            @include mq(lg) {
+                width: 20vw;
+                height: 35vh;
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        &__image2 {
+            background-image: url(/images/Hero/dietician4.jpg);
+            background-size: cover;
+            width: 50vw;
+            height: 20vh;
+            margin-top: 10%;
+            margin-right: -10%;
+
+            @include mq(md) {
+                width: 25vw;
+                margin-left: 40vw;
+                margin-top: 0;
+            }
+            @include mq(lg) {
+                width: 25vw;
+            }
+            @include mq(xl) {
+                margin-top: 5%;
+            }
+        }
+    }
+
+
+}
