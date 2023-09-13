@@ -23,6 +23,11 @@
         &__h2 {
             @extend .font-xl;
             color: white;
+
+            @include mq(lg){
+                margin-left: 15%;
+
+            }
         }
 
         &__span {
@@ -41,6 +46,10 @@
 
         @include mq(md) {
             margin: 0 auto;
+        }
+
+        @include mq(lg) {
+            padding-left: 15%;
         }
 
         &__headline {
