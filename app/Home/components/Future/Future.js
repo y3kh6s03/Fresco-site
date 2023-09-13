@@ -13,7 +13,7 @@ export const HomeFuture = () => {
             </div>
             <div className="homeFuture__description">
                 <h3 className="homeFuture__description__headline">
-                    私たちは、より健康的で持続可能な食事を提供し、人々の生活を豊かにすることをビジョンとしています。
+                    私たちは、より健康的で持続可能な食事を提供し、人々の生活を豊かに
                 </h3>
                 <p className="homeFuture__description__p">
                     私たちのビジョンは、食事を通じて人々の健康と幸福を支え、社会に良い影響をもたらすことです。私たちは食事を単なる食べ物ではなく、生活の中心であり、幸福の源と捉えています。<br />
@@ -24,7 +24,18 @@ export const HomeFuture = () => {
 
                     私たちのビジョンは不変です。食事を通じて健康と幸福を提供し、食事革命の旗手として未来を切り拓いていきます。私たちと共に、健康な未来を築きましょう。
                 </p>
+                <div className="homeFuture__description__image"></div>
             </div>
+
+
+            {/* ①Gsapでメディアクエリを分けて、アニメーションを設定する方法を模索する */}
+            {/* ※480以下では、descriptionが左から右にパスで隠されていた写真が表示
+            それ以上のデバイスでは、スケールが半分からパッディングを残して最大表示になる
+            その後にテキストが下から上に表示されるようにする。
+            発火条件は、スクロールしてhomeFutureコンテナのTOPがBottomに到達したら発火
+            アニメーション完了がTopがセンター付近で完了になるように一旦実装したい
+            このため、利用ライブラリはGsapを予定する */}
+
 
 
         </section>
