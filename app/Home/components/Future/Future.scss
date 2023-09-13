@@ -3,14 +3,86 @@
 
 .homeFuture {
     height: 100vh;
+    position: relative;
+    padding-top: 100px;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 85%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $cGreen;
+        z-index: -99;
+    }
+
     &__title {
-        &__h2 {}
-        &__span {}
+        @extend .mb-md;
+
+        &__h2 {
+            @extend .font-xl;
+            color: white;
+        }
+
+        &__span {
+            display: block;
+            color: white;
+            @extend .font-md;
+        }
+
     }
 
     &__description {
-        &__headline {}
-        &__p {}
+        margin: 0 calc(50% - 50vw);
+        padding: 15% 10% 20%;
+        position: relative;
+        bottom: 0;
+
+        @include mq(md) {
+            margin: 0 auto;
+        }
+
+        &__headline {
+            @extend .font-lg;
+            @extend .mb-sm;
+            color: white;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+
+        }
+
+        &__p {
+            color: white;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            background-image: url(/images/Hero/healthy-body.jpg);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: $cBlack;
+                opacity: .35;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+        }
     }
 
 }
