@@ -3,7 +3,7 @@ import "app/Home/components/Future/Future.scss"
 export const HomeFuture = () => {
     return (
         <section className="homeFuture container">
-            <div className="homeFuture__title">
+            <div className="homeFuture__title contents__title">
                 <h2 className="homeFuture__title__h2">
                     Future
                     <span className="homeFuture__title__span">

@@ -2,14 +2,14 @@
 
 
 .homeFuture {
-    height: 100vh;
+    height: auto;
     position: relative;
-    padding-top: 100px;
+    @extend .mb-lg;
 
     &::before {
         content: "";
         width: 100%;
-        height: 85%;
+        height: 80%;
         position: absolute;
         top: 0;
         left: 0;
@@ -17,25 +17,8 @@
         z-index: -99;
     }
 
-    &__title {
-        @extend .mb-md;
-
-        &__h2 {
-            @extend .font-xl;
-            color: white;
-
-            @include mq(lg){
-                margin-left: 15%;
-
-            }
-        }
-
-        &__span {
-            display: block;
-            color: white;
-            @extend .font-md;
-        }
-
+    &__title{
+        padding-top: 200px;
     }
 
     &__description {
@@ -46,10 +29,6 @@
 
         @include mq(md) {
             margin: 0 auto;
-        }
-
-        @include mq(lg) {
-            padding-left: 15%;
         }
 
         &__headline {
@@ -73,7 +52,7 @@
         &__image {
             width: 100%;
             height: 100%;
-            background-image: url(/images/Hero/healthy-body.jpg);
+            background-image: url(/images/Home/healthy-body.jpg);
             background-size: cover;
             background-position: center;
             position: absolute;
