@@ -12,43 +12,8 @@
         justify-content: space-between;
         @extend .mb-md;
 
-        &__h2 {
-            @extend .font-xl;
-            position: relative;
-
-            @include mq(lg){
-                margin-left: 15%;
-
-            }
-
-            &::before {
-                content: "";
-                width: 10%;
-                height: 1px;
-                position: absolute;
-                bottom: 36%;
-                left: 0;
-                background-color: $cBlack;
-
-                @include mq(md){
-                    bottom: 30%;
-                }
-                @include mq(xl){
-                    bottom: 25%;
-                }
-            }
-
-            &__span {
-                display: block;
-                @extend .font-sm;
-
-            }
-        }
-
-
-
         &__image {
-            background-image: url(/images/Hero/catering2.jpg);
+            background-image: url(/images/Home/catering2.jpg);
             background-size: cover;
             width: 50%;
             height: 50vh;
@@ -91,7 +56,7 @@
         }
 
         &__image1 {
-            background-image: url(/images/Hero/slide_004.png);
+            background-image: url(/images/Home/slide_004.png);
             background-size: cover;
             background-position: right;
             width: 37vw;
@@ -114,7 +79,7 @@
         }
 
         &__image2 {
-            background-image: url(/images/Hero/dietician4.jpg);
+            background-image: url(/images/Home/dietician4.jpg);
             background-size: cover;
             width: 50vw;
             height: 20vh;

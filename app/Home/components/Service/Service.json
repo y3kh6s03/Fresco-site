@@ -1,0 +1,32 @@
+[
+    {
+        "num": "01",
+        "enTitle": "Kyushoku",
+        "jaTitle": "給食受託事業",
+        "href": "#",
+        "src": "/images/Home/kyushoku.jpg"
+    },
+    {
+        "num": "02",
+        "enTitle": "Support",
+        "jaTitle": "直営給食サポート事業",
+        "href": "#",
+        "src": "/images/Home/dietician3.jpg"
+
+    },
+    {
+        "num": "03",
+        "enTitle": "Catering",
+        "jaTitle": "ケータリング事業",
+        "href": "#",
+        "src": "/images/Home/catering3.jpg"
+    },
+    {
+        "num": "04",
+        "enTitle": "Frozen yogurt",
+        "jaTitle": "フローズンヨーグルト事業",
+        "href": "#",
+        "src": "/images/Home/frozen.jpg"
+
+    }
+]

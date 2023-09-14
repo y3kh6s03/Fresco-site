@@ -40,9 +40,11 @@ $cBlue: #AACBD0;
     @include mq(md) {
         font-size: 25px;
     }
+
     @include mq(lg) {
         font-size: 36px;
     }
+
     @include mq(xl) {
         font-size: 42px;
     }
@@ -54,9 +56,11 @@ $cBlue: #AACBD0;
     @include mq(md) {
         font-size: 36px;
     }
+
     @include mq(lg) {
         font-size: 42px;
     }
+
     @include mq(xl) {
         font-size: 60px;
     }
@@ -89,8 +93,9 @@ $cBlue: #AACBD0;
 }
 
 .mb-lg {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
+
 /////////////////////////////////////
 // Base setting
 /////////////////////////////////////
@@ -124,7 +129,7 @@ body {
     overflow: hidden;
 }
 
-.container{
+.container {
     width: 100vw;
     max-width: 1440px;
     padding: 0 5%;
@@ -136,4 +141,43 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.contents__title {
+    @extend .mb-md;
+
+    & h2 {
+        @extend .font-xl;
+        color: $cBlack;
+        position: relative;
+
+        @include mq(lg) {
+            margin-left: 10%;
+
+        }
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 1px;
+            position: absolute;
+            bottom: 36%;
+            left: 0;
+            background-color: $cBlack;
+
+            @include mq(md) {
+                bottom: 30%;
+            }
+
+            @include mq(xl) {
+                bottom: 28%;
+            }
+        }
+    }
+
+    & span {
+        display: block;
+        color: $cBlack;
+        @extend .font-md;
+    }
 }

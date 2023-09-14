@@ -4,7 +4,7 @@ import "app/Home/components/About/About.scss"
 export const HomeAbout = () => {
     return (
         <section className="homeAbout">
-            <div className="homeAbout__title">
+            <div className="homeAbout__title contents__title">
                 <h2 className="homeAbout__title__h2">
                     About
                     <span className="homeAbout__title__h2__span">
