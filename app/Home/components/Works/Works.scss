@@ -1,0 +1,69 @@
+@use "styles/_globals.scss" as *;
+
+.homeWorks {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 70%;
+        height: 100%;
+        background-color: $cOrange;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__title {
+        padding-top: 80px;
+    }
+
+    & .swiper {
+        width: 100vw;
+        margin-right: calc(50% - 50vw);
+        position: relative;
+
+        @include mq(lg) {
+            margin-right: calc(35% - 50vw);
+        }
+
+        & img {
+            // width: 80vw;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+        }
+
+        & span {
+            width: 70%;
+            color: white;
+            @extend .font-md;
+            display: block;
+            @extend .mb-sm;
+            position: absolute;
+            bottom: 0;
+            text-shadow: 2px 2px 10px #888888;
+            left: 10%;
+
+            &:nth-of-type(1) {
+                bottom: 40%;
+            }
+
+            &:nth-of-type(2) {
+                bottom: 5%;
+            }
+        }
+    }
+
+    & .swiper-wrapper {
+        transition-timing-function: linear;
+    }
+
+    &__holizonScroll {
+        bottom: 150px;
+        right: 0;
+    }
+}
