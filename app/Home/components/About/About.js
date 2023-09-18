@@ -1,3 +1,5 @@
+"use client"
+
 import { LgButton } from "@/app/components/Button/Button"
 import "app/Home/components/About/About.scss"
 

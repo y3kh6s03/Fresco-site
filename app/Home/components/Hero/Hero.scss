@@ -210,7 +210,6 @@
     .hero__title {
         &__inner {
             & h1 {
-
                 &::before {
                     transform: scaleX(1);
                     transform-origin: right;
@@ -219,4 +218,12 @@
             }
         }
     }
+}
+
+
+
+.yellow__box{
+    width: 100vw;
+    height: 100vh;
+    background-color: yellow;
 }
