@@ -17,7 +17,13 @@
         z-index: -99;
     }
 
-    &__title{
+    &__path {
+        margin: 0 calc(50% - 50vw);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        transform: scale(0.85);
+    }
+
+    &__title {
         padding-top: 200px;
     }
 
