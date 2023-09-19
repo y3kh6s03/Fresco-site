@@ -25,7 +25,7 @@ export const Hero = () => {
                 trigger: ".hero",
                 start: "bottom center+=40%",
                 toggleActions: "play none none reverse",
-                markers: true
+                // markers: true
             }
         })
     }, [])
