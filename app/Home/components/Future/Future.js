@@ -15,7 +15,7 @@ export const HomeFuture = () => {
         gsap.to(".homeFuture__path", {
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
             ease: "Power4.easeInOut",
-            duration: 3,
+            duration: 2,
 
             scrollTrigger: {
                 trigger: ".homeFuture",

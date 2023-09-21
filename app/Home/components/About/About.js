@@ -10,7 +10,7 @@ export const HomeAbout = () => {
                 <h2 className="homeAbout__title__h2">
                     About
                     <span className="homeAbout__title__h2__span">
-                        わたしたちの大切にしていること
+                        大切にしていること
                     </span>
                 </h2>
                 <div className="homeAbout__title__image"></div>
