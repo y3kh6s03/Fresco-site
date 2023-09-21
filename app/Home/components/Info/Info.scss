@@ -1,0 +1,34 @@
+@use "styles/_globals.scss" as *;
+
+.homeInfo {
+    &__title {
+        &__h2 {}
+
+        &__span {}
+    }
+
+    &__link {
+
+        @include mq(md){
+            padding: 0 10%;
+            gap: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        & .mdbutton{
+            @extend .mb-md;
+
+            @include mq(lg){
+                flex: 1;
+            }
+
+            &__image{
+                height: 250px;
+                @extend .mb-sm;
+            }
+        }
+    }
+
+}
