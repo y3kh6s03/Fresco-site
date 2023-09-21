@@ -166,7 +166,7 @@ a {
             background-color: $cBlack;
 
             @include mq(md) {
-                bottom: 30%;
+                bottom: 35%;
             }
 
             @include mq(xl) {
