@@ -1,5 +1,5 @@
 import { LgButton } from "@/app/components/Button/Button";
-import "app/Home/components/Recriot/Recruit.scss";
+import "app/Home/components/Recruit/Recruit.scss";
 
 export const HomeRecruit = () => {
     return (
@@ -15,8 +15,13 @@ export const HomeRecruit = () => {
                     </h2>
                 </div>
                 <div className="homeRecruit__inner__content">
+                    <h4>食で未来を変えていく。</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus cupiditate, inventore saepe eveniet voluptatum dolor provident veniam quas nisi dignissimos necessitatibus voluptas dolorum ex! Perferendis odio quisquam culpa nisi quibusdam!
+                        生まれてからこの世を去るまで、誰もが行う食事。<br />
+                        しかし、食の可能性は私たちの体を生かすことだけにとどまりません。<br />
+                        たくさんの人の健康を、環境保全を、生産者のみなさまの課題解決を、
+                        あらゆることを食のチカラで実現したい。<br />
+                        食のチカラを信じる仲間とともに、新たな未来を一緒に作りませんか?<br />
                     </p>
                 </div>
                 <LgButton href={"#"} buttonName={"Recruit"} />

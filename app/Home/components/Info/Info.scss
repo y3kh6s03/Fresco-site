@@ -1,6 +1,7 @@
 @use "styles/_globals.scss" as *;
 
 .homeInfo {
+    @extend .mb-lg;
     &__title {
         &__h2 {}
 
