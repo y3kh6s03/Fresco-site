@@ -61,6 +61,7 @@
 
         &__content {
             @extend .mb-md;
+            width: 90%;
 
             @include mq(md){
                 width: 75%;
@@ -69,10 +70,19 @@
                 padding-left: 10%;
                 width: 65%;
             }
+
+            & h4{
+                @extend .font-lg;
+                @extend .mb-sm;
+            }
         }
 
         & .lgbutton {
             @extend .mb-md;
+
+            @include mq(lg){
+                padding: 0 10%;
+            }
         }
     }
 }

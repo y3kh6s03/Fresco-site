@@ -30,3 +30,17 @@ export const MdButton = ({ href, buttonEnName, buttonJaName, image }) => {
         </Link>
     )
 }
+
+export const ContactButton = ({ }) => {
+    return (
+        <Link href={"#"} className="contactButton">
+            <div className="contactButton__text">
+                <span className="contactButton__text__span">お問い合わせ</span>
+            </div>
+            <span className="contactButton__holizon"></span>
+            <div className="contactButton__link">
+                <span>Click the link</span>
+            </div>
+        </Link>
+    )
+}
