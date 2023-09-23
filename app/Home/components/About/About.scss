@@ -10,6 +10,11 @@
     position: relative;
     z-index: 0;
 
+    @include mq(lg){
+        padding-left: 10%;
+
+    }
+
     &::before{
         content: "";
         background-image: url(/images/noise.png);
@@ -76,9 +81,14 @@
         &__image {
             background-image: url(/images/Home/catering2.jpg);
             background-size: cover;
-            width: 50%;
+            width: 50vw;
             height: 50vh;
+            margin-right: calc(50% - 50vw);
 
+            @include mq(sm){
+                width: 45vw;
+                margin-right: calc(50% - 50vw);
+            }
             @include mq(lg){
                 width: 40%;
             }
@@ -136,6 +146,7 @@
                 height: 35vh;
                 position: absolute;
                 top: 0;
+                margin-left: -11%;
             }
         }
 

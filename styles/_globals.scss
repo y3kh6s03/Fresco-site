@@ -67,16 +67,25 @@ $cBlue: #AACBD0;
 }
 
 .font-xxl {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.2;
 
-    @include mq(md) {
+    @include mq(sm){
         font-size: 60px;
+    }
+
+    @include mq(md) {
+        font-size: 70px;
         line-height: 1;
     }
 
     @include mq(lg) {
-        font-size: 70px;
+        font-size: 80px;
+        line-height: 1;
+    }
+
+    @include mq(xl) {
+        font-size: 90px;
         line-height: 1;
     }
 }
@@ -133,6 +142,10 @@ body {
     width: 100vw;
     max-width: 1440px;
     padding: 0 5%;
+
+    @include mq(lg){
+        padding: 0 10%;
+    }
 }
 
 li {
@@ -150,11 +163,6 @@ a {
         @extend .font-xl;
         color: $cBlack;
         position: relative;
-
-        @include mq(lg) {
-            margin-left: 10%;
-
-        }
 
         &::before {
             content: "";

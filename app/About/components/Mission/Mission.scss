@@ -1,0 +1,35 @@
+@use "styles/_globals.scss" as *;
+
+.mission {
+    @extend .mb-lg;
+
+    &__contents {
+        @include mq(lg) {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        &__title {
+            @extend .mb-md;
+            flex: 1;
+
+            @include mq(md){
+                width: 80vw;
+            }
+
+            &__h3 {
+                @extend .font-lg;
+            }
+
+        }
+        &__description {
+            @include mq(md){
+                width: 80vw;
+            }
+            @include mq(lg){
+                flex: 1.5;
+            }
+        }
+    }
+}

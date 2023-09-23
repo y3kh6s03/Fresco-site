@@ -250,6 +250,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    @extend .mb-lg;
 
     @include mq(md){
         width: 400px;

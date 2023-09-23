@@ -81,7 +81,7 @@
             @extend .mb-md;
 
             @include mq(lg){
-                padding: 0 10%;
+                margin-left: 10%;
             }
         }
     }

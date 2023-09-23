@@ -1,15 +1,11 @@
+import { About } from "@/app/About/components/About";
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero";
 
 
-const About = () => {
-    const AboutHeroItem = {
-        enTitle: "About",
-        jaTitle: "私たちについて",
-        src: "/images/About/AboutHero.jpg"
-    }
+const Home = () => {
     return (
-        <SubPageHero item={AboutHeroItem}/>
+        <About />
     )
 }
 
-export default About;
+export default Home;
