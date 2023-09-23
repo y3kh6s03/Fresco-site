@@ -1,15 +1,40 @@
 @use "styles/_globals.scss" as *;
 
 .subPageHero {
-    &__title {
-        &__h1 {}
+    width: 100vw;
+    height: 50VW;
+    min-height: 400PX;
+    position: relative;
+    @extend .mb-lg;
 
-        &__span {}
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        z-index: 10;
+        filter: drop-shadow(1px 1px 5px white);
+
+        @include mq(lg){
+            left: 10%;
+        }
+
+        &__h1 {
+            @extend .font-xxl;
+        }
+
+        &__span {
+            @extend .font-md;
+        }
     }
 
     &__image {
-        width: 65vw;
-        height: 500px;
+        width: 65%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
         &__img {
             width: 100%;
             height: 100%;

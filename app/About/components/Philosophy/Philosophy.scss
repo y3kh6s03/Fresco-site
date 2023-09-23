@@ -1,0 +1,27 @@
+@use "styles/_globals.scss" as *;
+
+
+.philosophy {
+    @extend .mb-lg;
+    // &__title {
+    //     &__h2 {}
+
+    //     &__span {}
+    // }
+
+    &__contents {
+
+        &__title {
+            @extend .mb-md;
+
+            &__h3 {
+                @extend .font-xxl;
+            }
+        }
+
+
+        &__description {}
+    }
+
+
+}
