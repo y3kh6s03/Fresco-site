@@ -116,9 +116,7 @@
         }
 
         & .lgbutton {
-            left: 100%;
             @extend .mb-md;
-            transform: translateX(-100%);
         }
 
         &__inner {

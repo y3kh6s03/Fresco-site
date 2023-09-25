@@ -20,7 +20,6 @@
     &__path {
         margin: 0 calc(50% - 50vw);
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-        transform: scale(0.85);
     }
 
     &__title {
@@ -61,21 +60,41 @@
 
         &__p {
             color: white;
+            @extend .mb-md;
             position: relative;
             z-index: 1;
             max-width: 600px;
+        }
 
+        & .lgbutton{
+            z-index: 10;
+
+            &__holizon{
+                background-color: white;
+
+            }
+            & span{
+                color: white;
+            }
+
+            &__arrow{
+                &::before,
+                &::after{
+                    background-color: white;
+                }
+            }
         }
 
         &__image {
-            width: 100%;
+            width: 85%;
             height: 100%;
             background-image: url(/images/Home/healthy-body.jpg);
             background-size: cover;
             background-position: center;
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
             &::before {
                 content: "";
