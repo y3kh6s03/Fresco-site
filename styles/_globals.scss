@@ -24,6 +24,7 @@ $cBlue: #AACBD0;
 
 .font-md {
     font-size: 14px;
+    line-height: 1.7;
 
     @include mq(md) {
         font-size: 15px;
