@@ -1,6 +1,9 @@
 @use "styles/_globals.scss" as *;
 
 .serviceContents {
+    @extend .mb-lg;
+    position: relative;
+
     &__title {
         &__h2 {
             &__span {}
@@ -11,7 +14,19 @@
 
 
     &__inner {
+        @include mq(md){
+        }
         &__description {
+            @extend .mb-md;
+
+            @include mq(md){
+                width: 55vw;
+                max-width: 600px
+            }
+            @include mq(lg){
+                width: 45vw;
+                max-width: 600px
+            }
 
             &__headline {
                 @extend .mb-md;
@@ -40,17 +55,33 @@
 
             &__p {
                 @extend .mb-md;
+
+                & span{
+                    display: block;
+                }
             }
         }
 
 
 
         &__image {
-            width: 90vw;
-            height: auto;
+            @include mq(md){
+                width: 30vw;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            @include mq(lg){
+                width: 40vw;
+                max-width: 600px
+            }
 
             & img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: left;
             }
         }
     }
