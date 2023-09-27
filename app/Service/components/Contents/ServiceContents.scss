@@ -1,0 +1,59 @@
+@use "styles/_globals.scss" as *;
+
+.serviceContents {
+    &__title {
+        &__h2 {
+            &__span {}
+        }
+
+        &__image {}
+    }
+
+
+    &__inner {
+        &__description {
+
+            &__headline {
+                @extend .mb-md;
+
+                & h3 {
+                    position: relative;
+                    @extend .font-lg;
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: $cBlack;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+
+            }
+
+            &__span {
+                display: block;
+
+            }
+
+            &__p {
+                @extend .mb-md;
+            }
+        }
+
+
+
+        &__image {
+            width: 90vw;
+            height: auto;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+
+}
