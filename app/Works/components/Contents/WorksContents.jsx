@@ -3,7 +3,7 @@ import workContentsItem from "app/Works/components/Contents/WorksContents.json"
 
 export const WorksContents = () => {
     return (
-        <>
+        <div className="worksContents__wrapper">
             {
                 workContentsItem.map((workContentItem, index) => {
                     return (
@@ -31,11 +31,9 @@ export const WorksContents = () => {
                                 <img src={workContentItem.subImage} alt="works-image" />
                             </div>
                         </section>
-
                     )
                 })
-
             }
-        </>
+        </div>
     )
 }

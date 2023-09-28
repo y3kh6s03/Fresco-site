@@ -10,7 +10,7 @@
             display: flex;
             @extend .mb-md;
 
-            @include mq(md){
+            @include mq(md) {
                 gap: 50px;
             }
 
@@ -44,11 +44,11 @@
                 flex: 1;
                 height: 250px;
 
-                @include mq(lg){
+                @include mq(lg) {
                     height: 350px;
                 }
 
-                @include mq(xl){
+                @include mq(xl) {
                     height: 450px;
                 }
 
@@ -70,8 +70,8 @@
         &__description {
             @extend .mb-md;
 
-            @include mq(lg){
-                width: 66%;
+            @include mq(md) {
+                width: 65%;
             }
         }
     }
@@ -80,17 +80,46 @@
         width: 50vw;
         margin-left: calc(50% - 50vw);
 
-        @include mq(md){
+        @include mq(md) {
             width: 40vw;
         }
 
-        @include mq(lg){
+        @include mq(lg) {
             width: 30vw;
         }
+
         & img {
             width: 100%;
         }
     }
+}
 
+.worksContents:nth-of-type(even) {
+    & .worksContents__inner {
+        &__title {
+            flex-direction: row-reverse;
 
+            &__h3 {
+                left: 3%;
+
+                & span {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+
+        &__description,
+        &__headline{
+
+            @include mq(md){
+                margin-left: 30vw;
+            }
+        }
+    }
+
+    & .worksContents__subimage {
+        margin-left: auto;
+        margin-right: calc(50% - 50vw);
+    }
 }
