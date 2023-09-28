@@ -1,0 +1,96 @@
+@use "styles/_globals.scss" as *;
+
+.worksContents {
+    @extend .mb-lg;
+
+    &__inner {
+
+        &__title {
+            position: relative;
+            display: flex;
+            @extend .mb-md;
+
+            @include mq(md){
+                gap: 50px;
+            }
+
+            &__h3 {
+                position: relative;
+                flex: 1;
+                @extend .font-lg;
+                white-space: nowrap;
+                z-index: 10;
+
+                &::before {
+                    content: "";
+                    width: 95%;
+                    height: 1px;
+                    background-color: $cBlack;
+                    position: absolute;
+
+                }
+
+                & span {
+                    @extend .font-sm;
+                    padding: 3px 5px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 3%;
+                    border: 1px solid $cBlack;
+                }
+            }
+
+            &__image {
+                flex: 1;
+                height: 250px;
+
+                @include mq(lg){
+                    height: 350px;
+                }
+
+                @include mq(xl){
+                    height: 400px;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+
+
+
+        &__headline {
+            @extend .mb-md;
+        }
+
+        &__description {
+            @extend .mb-md;
+
+            @include mq(lg){
+                width: 66%;
+            }
+        }
+    }
+
+    &__subimage {
+        width: 50vw;
+        margin-left: calc(50% - 50vw);
+
+        @include mq(md){
+            width: 40vw;
+        }
+
+        @include mq(lg){
+            width: 30vw;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+
+
+}
