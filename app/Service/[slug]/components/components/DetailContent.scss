@@ -1,0 +1,114 @@
+@use "styles/_globals.scss" as *;
+
+.detailContent {
+    @extend .mb-lg;
+    position: relative;
+
+    &__inner {
+        @extend .mb-md;
+
+        @include mq(lg) {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        &__description {
+            @extend .mb-md;
+            width: 70vw;
+
+            @include mq(md) {
+                max-width: 500px
+            }
+
+            @include mq(lg) {
+                flex: 1.5;
+                max-width: 600px;
+            }
+
+            @include mq(xl) {
+                max-width: 750px;
+            }
+
+            & h3 {
+                @extend .font-lg;
+                @extend .mb-md;
+            }
+
+            & p {}
+        }
+
+        &__image {
+            width: 80vw;
+            height: 250px;
+            margin-right: calc(50% - 50vw);
+            margin-left: auto;
+            position: relative;
+
+            @include mq(sm) {
+                width: 50vw;
+                height: 200px;
+            }
+
+            @include mq(md) {
+                width: 40vw;
+                height: 200px;
+            }
+
+            @include mq(lg) {
+                width: 30vw;
+                height: 400px;
+                margin-top: 10%;
+            }
+
+            & img {
+                width: 100%;
+                max-width: 450px;
+                height: 100%;
+                max-height: 450px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    &__inner:nth-child(2) {
+
+        @include mq(lg) {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            gap: 50px;
+        }
+
+        & .detailContent__inner__image {
+
+            @include mq(sm) {
+                width: 50vw;
+            }
+
+            @include mq(md) {
+                width: 35vw;
+                height: 350px;
+            }
+
+            @include mq(lg) {
+                margin-left: calc(50% - 50vw);
+                margin-right: auto;
+            }
+
+            & img {
+                width: 100%;
+                max-width: 450px;
+                height: 100%;
+                max-height: 450px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+
+
+
+}

@@ -2,9 +2,10 @@ import "app/components/SubPageHero/SubPageHero.scss"
 
 export const SubPageHero = ({ item }) => {
     return (
+        <>
         <section className="subPageHero">
             <div className="subPageHero__title">
-                <h1 className="subPageHero__title__h1">{item.enTitle}</h1>
+                <h1 className="subPageHero__title__h1">{item.enTitle.toUpperCase()}</h1>
                 <span className="subPageHero__title__span">
                     {item.jaTitle}
                 </span>
@@ -13,5 +14,10 @@ export const SubPageHero = ({ item }) => {
                 <img src={item.src} alt="subpageHero-image" className="subPageHero__image__img" />
             </div>
         </section>
+
+        <h3 className="subPageHero__headline">
+            {item.headline}
+        </h3>
+        </>
     )
 }

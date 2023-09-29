@@ -5,7 +5,7 @@
         "jaHeadline": "五感で食事を楽しむ",
         "enHeadline": "Enjoying through the five senses.",
         "description": "老健施設、特養施設、グループホーム、障害者支援施設などの施設へ給食を提供するサービスです。\n栄養基準にのっとった献立の立案、食材発注、調理までを一気通貫して行っています。地元・長野の食材や四季折々の旬の食材をふんだんに使ったバラエティ豊かな日常の献立に加えて、季節の移り変わりを感じるイベント食、施設様に合わせた企画食などもご提案。\nおいしく食べることはもちろん、楽しく食べる時間を大切にする「五感で楽しむ食体験」を提供します。",
-        "href": "#",
+        "href": "/Service/Kyushoku",
         "image": "/images/Home/kyushoku.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "jaHeadline": "手作りの美味しさをサポート",
         "enHeadline": "Supporting the Taste of Homemade Goodness",
         "description": "グループホームなどの小規模施設や、社員食堂・学生食堂、保育園・幼稚園などの食事提供をサポートするサービスです。\n管理栄養士が監修した献立、和食料理人が考えたレシピ、食材をセットにしてお届けするので、手作りのお食事を少ない負担で利用者様へご提供できます。",
-        "href": "#",
+        "href": "/Service/Support",
         "image": "/images/Home/dietician3.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "jaHeadline": "食事のセミオーダー",
         "enHeadline": "Customized Dining Experience",
         "description": "プロの料理人と管理栄養士が手がける本格的な料理を、ご要望に合わせたかたちでご提供するケータリングサービスです。\nロケーション、料理ジャンル、食材などは問わず、可能な限りご要望に寄り添います。企業イベント、交流会、ホームパーティーなどあらゆるシーンで対応いたします。利用する食材はなるべく長野県産のものにこだわり、県内各地の生産者さんがつくる新鮮な食材をお楽しみいただけます。",
-        "href": "#",
+        "href": "/Service/Catering",
         "image": "/images/Home/catering.jpg"
     },
     {
@@ -32,7 +32,7 @@
         "jaHeadline": "どこでも優しい美味しさを",
         "enHeadline": "Delicious Kindness Anywhere",
         "description": "フロスタは、千曲市・戸倉上山田温泉街に店舗を構えるフローズンヨーグルト専門店。\n店舗だけでなく、県内の飲食店様、小売店様、温泉施設様でも楽しんでいただくための卸販売や、キッチンカー「Trip」での県内出店を行っています。",
-        "href": "#",
+        "href": "/Service/Frozen-yogurt",
         "image": "/images/Home/frozen.jpg"
     }
 ]

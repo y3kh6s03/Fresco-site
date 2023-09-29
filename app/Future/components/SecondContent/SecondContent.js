@@ -5,9 +5,9 @@ export const SecondContent = () => {
         <section className="secondContent container">
 
             <div className="secondContent__title">
-                <spna className="secondContent__title__span">
+                <span className="secondContent__title__span">
                     Create Healthy.
-                </spna>
+                </span>
             </div>
             <div className="secondContent__inner">
                 <div className="secondContent__inner__description">

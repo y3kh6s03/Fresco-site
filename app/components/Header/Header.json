@@ -2,22 +2,27 @@
     {
         "title": "Home",
         "jaTitle": "ホーム",
-        "url": "#"
+        "url": "/"
     },
     {
         "title": "About",
-        "jaTitle": "フレスコ・カンパニーについて",
-        "url": "#"
+        "jaTitle": "わたしたちについて",
+        "url": "/About"
+    },
+    {
+        "title": "Future",
+        "jaTitle": "わたしたちの未来",
+        "url": "/Future"
     },
     {
         "title": "Service",
         "jaTitle": "わたしたちの事業",
-        "url": "#"
+        "url": "/Service"
     },
     {
         "title": "Works",
-        "jaTitle": "私たちの実績",
-        "url": "#"
+        "jaTitle": "わたしたちの実績",
+        "url": "/Works"
     },
     {
         "title": "Recruit",
@@ -27,6 +32,6 @@
     {
         "title": "Contact",
         "jaTitle": "お問い合わせ",
-        "url": "#"
+        "url": "/Contact"
     }
 ]
