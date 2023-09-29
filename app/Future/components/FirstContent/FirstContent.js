@@ -11,9 +11,9 @@ export const FirstContent = () => {
             </div>
 
             <div className="firstContent__title">
-                <spna className="firstContent__title__span">
+                <span className="firstContent__title__span">
                     The Act Of Eating Is The Act Of Living.
-                </spna>
+                </span>
             </div>
             <div className="firstContent__inner">
                 <div className="firstContent__inner__description">

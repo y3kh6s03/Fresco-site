@@ -4,8 +4,9 @@
     width: 100vw;
     height: 50VW;
     min-height: 400PX;
+    max-height: 700px;
     position: relative;
-    @extend .mb-lg;
+    @extend .mb-md;
 
     &__title {
         position: absolute;
@@ -40,6 +41,19 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+    }
+
+    &__headline{
+        @extend .mb-lg;
+        @extend .font-md;
+        padding: 0 5%;
+
+        @include mq(md){
+            width: 80%;
+        }
+        @include mq(lg){
+            padding: 0 10%;
         }
     }
 

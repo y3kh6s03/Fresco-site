@@ -13,7 +13,6 @@ export const Header = () => {
 
     const toggleMobileMenu = () => {
         setIsOpen((prev) => !prev)
-        console.log(isOpen)
     }
 
 
@@ -32,7 +31,7 @@ export const Header = () => {
                 <p>
                     Navigation
                 </p>
-                <ul className="header__nav__ul">
+                <ul className="header__nav__ul" onClick={toggleMobileMenu}>
                     {
                         headerItems.map((headerItem) => {
                             return (

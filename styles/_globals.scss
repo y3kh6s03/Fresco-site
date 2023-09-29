@@ -110,12 +110,20 @@ $cBlue: #AACBD0;
 // Base setting
 /////////////////////////////////////
 * {
-    @extend .font-md;
+    font-size: 14px;
+    line-height: 1.7;
+
+    @include mq(md) {
+        font-size: 15px;
+    }
+
+    @include mq(lg) {
+        font-size: 16px;
+    }
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: $cBlack;
-    line-height: 1.6;
 }
 
 body {
