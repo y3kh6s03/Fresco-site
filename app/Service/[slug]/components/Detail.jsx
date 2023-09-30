@@ -1,22 +1,29 @@
 "use client"
+import { usePathname } from "next/navigation";
 
+import detailItems from "app/Service/[slug]/components/components/DetailContent.json";
 import { DetailContent } from "@/app/Service/[slug]/components/components/DetailContent";
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero";
-import { usePathname } from "next/navigation";
 
 export const Detail = () => {
 
+    const router = usePathname();
+    const path = router.replace("/Service/", "");
+    const contentItem = detailItems.filter((detailItem) => {
+        return path === detailItem.slug;
+    })
+
     const detailHeroItem = {
-        enTitle: "Kyushoku",
-        jaTitle: "給食受託事業",
-        src: "/images/Home/kyushoku.jpg",
-        headline: "長野市、上田市、千曲市を中心に、老健施設、特養施設、グループホーム、障害者支援施設などの施設へ給食を提供するサービスです。栄養基準にのっとった献立の立案、食材発注、調理までを一気通貫して行っています。"
+        enTitle: contentItem[0].slug,
+        jaTitle: contentItem[0].jaTitle,
+        src: contentItem[0].src,
+        headline: contentItem[0].heroHeadline
     }
 
     return (
         <>
             <SubPageHero item={detailHeroItem} />
-            <DetailContent/>
+            <DetailContent contentItem={contentItem} />
         </>
     )
 }
