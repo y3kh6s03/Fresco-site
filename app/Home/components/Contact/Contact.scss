@@ -3,9 +3,7 @@
     @extend .mb-lg;
 }
 .homeContact__inner{
-    @include mq(lg){
-        padding-left: 10%;
-    }
+
     &__description{
         @extend .mb-md;
     }

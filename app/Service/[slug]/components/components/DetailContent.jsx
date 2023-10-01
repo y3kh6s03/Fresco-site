@@ -1,20 +1,10 @@
-import { usePathname } from "next/navigation";
 
-import detailItems from "app/Service/[slug]/components/components/DetailContent.json";
+import { LgButton } from "@/app/components/Button/Button";
 import "app/Service/[slug]/components/components/DetailContent.scss"
 
-export const DetailContent = () => {
+export const DetailContent = ({contentItem}) => {
 
-    const router = usePathname();
-    const path = router.replace("/Service/", "");
-
-    const contentItem = detailItems.filter((detailItem) => {
-        return path === detailItem.slug;
-    })
-
-    console.log(contentItem[0]);
-
-
+    console.log(contentItem);
 
     return (
         <section className="detailContent container">
@@ -30,7 +20,7 @@ export const DetailContent = () => {
                 </div>
 
                 <div className="detailContent__inner__image">
-                    <img src="/images/Service/salada.jpg" alt="detail-image" />
+                    <img src={contentItem[0].image1} alt="detail-image" />
                 </div>
             </div>
             <div className="detailContent__inner">
@@ -45,12 +35,11 @@ export const DetailContent = () => {
                 </div>
 
                 <div className="detailContent__inner__image">
-                    <img src="/images/Service/salada.jpg" alt="detail-image" />
+                    <img src={contentItem[0].image2} alt="detail-image" />
                 </div>
             </div>
+
+            <LgButton href={"/Service"} buttonName={"Service list"}/>
         </section>
     )
 }
-
-// パス＝＝＝json.slugだった場合
-// filterを使ってしていすることで実現できるかな
