@@ -87,13 +87,13 @@
 
             @include mq(sm){
                 width: 45vw;
-                margin-right: calc(50% - 50vw);
             }
             @include mq(lg){
                 width: 40%;
             }
             @include mq(xl){
                 width: 30%;
+                margin-right: calc(0);
             }
         }
     }
@@ -104,19 +104,34 @@
 
         &__p {
             @extend .mb-sm;
+            max-width: 500px;
 
             @include mq(md){
-                width: 45vw;
-                margin-left: calc(100% - 50vw);
+                width: 50vw;
+                margin-left: 30%;
             }
             @include mq(lg){
                 width: 40vw;
-                margin-left: calc(90% - 50vw);
+                margin-left: 25%;
+            }
+            @include mq(xl){
+                width: 30vw;
+
             }
         }
 
         & .lgbutton {
             @extend .mb-md;
+
+            @include mq(md){
+                margin-left: 30%;
+            }
+            @include mq(lg){
+                margin-left: 25%;
+            }
+
+            @include mq(xl){
+            }
         }
 
         &__inner {
@@ -129,6 +144,7 @@
             background-size: cover;
             background-position: right;
             width: 37vw;
+            max-width: 350px;
             height: 40vh;
             margin-left: -6%;
 

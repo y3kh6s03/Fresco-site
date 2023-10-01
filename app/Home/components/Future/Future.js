@@ -24,7 +24,6 @@ export const HomeFuture = () => {
                 trigger: ".homeFuture",
                 start: `top-=${.5 * vh} bottom`,
                 toggleActions: "play none none reverse",
-                // markers: true
             }
         })
         gsap.to(".homeFuture__description__image", {

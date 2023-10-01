@@ -3,6 +3,7 @@
 .homeWorks {
     width: 100vw;
     height: 100vh;
+    max-height: 900px;
     position: relative;
     @extend .mb-lg;
 
@@ -50,6 +51,7 @@
 
         & span {
             width: 70%;
+            max-width: 400px;
             color: white;
             @extend .font-md;
             display: block;

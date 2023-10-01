@@ -10,7 +10,6 @@ export const Home = () => {
     return (
         <>
             <Hero />
-            {/* <HomeAbout/> */}
             <HomeFuture/>
             <HomeService/>
             <HomeWorks/>

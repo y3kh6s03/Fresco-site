@@ -27,18 +27,18 @@ export const HomeWorks = () => {
                 speed={10000}
                 breakpoints={{
                     600: {
-                      slidesPerView: 1,
-                      spaceBetween: 0,
+                        slidesPerView: 1,
+                        spaceBetween: 0,
                     },
                     900: {
-                      slidesPerView: 2,
-                      spaceBetween: 0,
+                        slidesPerView: 2,
+                        spaceBetween: 0,
                     },
                     1280: {
-                      slidesPerView: 2,
-                      spaceBetween: 0,
+                        slidesPerView: 2,
+                        spaceBetween: 0,
                     },
-                  }}
+                }}
                 modules={[Autoplay]}
                 loop={true}
             >
