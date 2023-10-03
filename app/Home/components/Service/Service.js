@@ -2,25 +2,17 @@ import Link from "next/link"
 
 import homeServiceItems from "app/Home/components/Service/Service.json"
 import "app/Home/components/Service/Service.scss"
-import { LgButton } from "@/app/components/Button/Button"
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle"
 
 export const HomeService = () => {
     return (
         <section className="homeService container">
-
-            <div className="homeService__title contents__title">
-                <h2 className="homeService__title__h2">
-                    Service
-                    <span className="homeService__title__span">
-                        フレスコ・カンパニーの事業について
-                    </span>
-                </h2>
-            </div>
+<ContentsTitle enTitle={"Service"} jaTitle={"私たちの事業について"}/>
 
             <ul className="homeService__ul">
-                {homeServiceItems.map((homeServiceItem) => {
+                {homeServiceItems.map((homeServiceItem, index) => {
                     return (
-                        <li className={`homeService__ul__li ${homeServiceItem.enTitle.toLowerCase()}`}>
+                        <li key={index}className={`homeService__ul__li ${homeServiceItem.enTitle.toLowerCase()}`}>
                             <div className="homeService__ul__li__image">
                                 <img src={homeServiceItem.src} alt="" />
                                 <p>Service <span>{homeServiceItem.num}</span></p>

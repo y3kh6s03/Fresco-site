@@ -1,4 +1,5 @@
 import { LgButton } from "@/app/components/Button/Button";
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle";
 import "app/Home/components/Recruit/Recruit.scss";
 
 export const HomeRecruit = () => {
@@ -6,14 +7,7 @@ export const HomeRecruit = () => {
         <section className="homeRecruit container">
             <div className="homeRecruit__image"></div>
             <div className="homeRecruit__inner">
-                <div className="homeRecruit__inner__title contents__title">
-                    <h2 className="homeRecruit__inner__title__h2">
-                        Recruit
-                        <span className="homeRecruit__inner__title__span">
-                            フレスコ・カンパニーの求人
-                        </span>
-                    </h2>
-                </div>
+                <ContentsTitle enTitle={"Recruit"} jaTitle={"私たちの求人"} />
                 <div className="homeRecruit__inner__content">
                     <h4>食で未来を変えていく。</h4>
                     <p>

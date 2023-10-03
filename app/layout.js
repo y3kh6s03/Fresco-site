@@ -33,6 +33,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="ja">
       <body className={`${noto_jp.className} ${noto.className} ${numFont.variable}`}>

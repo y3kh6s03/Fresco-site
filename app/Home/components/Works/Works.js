@@ -6,18 +6,12 @@ import { Autoplay } from "swiper/modules"
 import "app/Home/components/Works/Works.scss";
 import "swiper/scss";
 import { HolizonScroll } from "@/app/components/Scroll/Scroll";
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle";
 
 export const HomeWorks = () => {
     return (
         <section className="homeWorks container">
-            <div className="homeWorks__title contents__title">
-                <h2 className="homeWorks__title__h2">
-                    Works
-                    <span className="homeWorks__title__span">
-                        フレスコ・カンパニーのアーカイブ
-                    </span>
-                </h2>
-            </div>
+            <ContentsTitle enTitle={"Works"} jaTitle={"私たちのアーカイブ"}/>
             <Swiper
                 className="homeWorks__swiper"
                 autoplay={{

@@ -1,14 +1,29 @@
+"use client"
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion"
+
 import "app/Future/components/FirstContent/FirstContent.scss";
 
-export const FirstContent = () => {
+export const FirstContent = ({ ref, transformXValue, transformYValue }) => {
+
     return (
         <section className="firstContent container">
 
-            <div className="future__title">
-                <h2 className="future__title__h2">
+            <motion.div
+                initial={{ clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" }}
+                whileInView={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
+                transition={{
+                    duration: 1.2,
+                    ease: [0.83, 0, 0.17, 1]
+                }}
+                viewport={{ once: true }}
+                className="future__title">
+                <h2
+                    className="future__title__h2">
                     食を通じて、<br />すこやかな未来をつくりたい
                 </h2>
-            </div>
+            </motion.div>
 
             <div className="firstContent__title">
                 <span className="firstContent__title__span">
@@ -31,17 +46,23 @@ export const FirstContent = () => {
                         生を提供します。
                     </p>
                 </div>
-                <div className="firstContent__inner__image">
-                    <div className="firstContent__inner__image__img1">
+                <div
+                    className="firstContent__inner__image">
+                    <motion.div
+                        ref={ref}
+                        style={{ y: transformYValue }} className="firstContent__inner__image__img1">
                         <img src="/images/Future/fruits.jpg" alt="firstContent__image" />
                         <img src="/images/Future/rice.jpg" alt="firstContent__image" />
                         <img src="/images/Future/liveAndMeal.jpg" alt="firstContent__image" />
-                    </div>
-                    <div className="firstContent__inner__image__img2">
+                    </motion.div>
+                    <motion.div
+                        ref={ref}
+                        style={{ x: transformXValue }}
+                        className="firstContent__inner__image__img2">
                         <img src="/images/Future/rice2.jpg" alt="firstContent__image" />
                         <img src="/images/Future/liveAndMeal2.jpg" alt="firstContent__image" />
                         <img src="/images/Future/liveAndMeal2.jpg" alt="firstContent__image" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

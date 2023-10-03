@@ -5,8 +5,10 @@ import "app/Home/components/Future/Future.scss"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect } from "react"
+import { motion } from "framer-motion"
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle"
 
-export const HomeFuture = () => {
+export const HomeFuture = ({variants}) => {
 
     useEffect(() => {
 
@@ -41,29 +43,32 @@ export const HomeFuture = () => {
 
     return (
         <section className="homeFuture container">
-            <div className="homeFuture__title contents__title">
-                <h2 className="homeFuture__title__h2">
-                    Future
-                    <span className="homeFuture__title__span">
-                        フレスコ・カンパニーのこれから
-                    </span>
-                </h2>
-            </div>
+            <ContentsTitle enTitle={"Future"} jaTitle={"私たちのこれから"}/>
             <div className="homeFuture__path">
-                <div className="homeFuture__description">
+                <motion.div
+
+                className="homeFuture__description">
                     <h3 className="homeFuture__description__headline">
                         食を通じて、すこやかな未来をつくりたい
                     </h3>
-                    <p className="homeFuture__description__p">
+                    <motion.p
+                    variants={variants}
+                    initial="initial"
+                    whileInView="whileInView"
+                    transition={{
+                        delay: .5,
+                        type: "tween"
+                    }}
+                    className="homeFuture__description__p">
                         食事からとる栄養は、生きていくために欠かせないものです。<br />しかし、生きるために必要なことは
                         食事だけではありません。健康づくりや地球環境保全など人生のためのあらゆる物事を、食事を
                         通じてよりよくしていきたい。<br />
                         フレスコカンパニーは、”食べる”を通じて今を生きる私たちや未来の
                         子供たちに笑顔あふれる人生を提供します。
-                    </p>
+                    </motion.p>
                     <LgButton href={"#"} buttonName={"Future"} />
                     <div className="homeFuture__description__image"></div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
