@@ -1,7 +1,9 @@
+import {motion} from "framer-motion"
+
 import { ContactButton } from "@/app/components/Button/Button";
 import "app/Future/components/ThirdContent/ThirdContent.scss";
 
-export const ThirdContent = () => {
+export const ThirdContent = ({ref, transformYValue}) => {
     return (
         <section className="thirdContent container">
 
@@ -23,9 +25,12 @@ export const ThirdContent = () => {
                         「フロスタ」をオープン。地場のフルーツや特産品とコラボしたメニュー開発を通じて、県内外を問わずたくさんの人に長野の美味しさをお届けしています。また、千曲市・あんずの里を保全するシェア農園事業もスタート。大地の恵みをいただくだけでなく、恵みを与えてくれる環境の保全や農業課題の解決に向けたアクションも行っています。
                     </p>
                 </div>
-                <div className="thirdContent__inner__image">
+                <motion.div
+                ref={ref}
+                style={{y: transformYValue}}
+                className="thirdContent__inner__image">
                     <img src="/images/Future/sun.jpg" alt="thirdContents-image" />
-                </div>
+                </motion.div>
             </div>
 
             <ContactButton />

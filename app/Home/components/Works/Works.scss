@@ -17,19 +17,21 @@
         left: 0;
     }
 
-    &__title {
+    & .contents__title{
         padding-top: 80px;
 
-        &__h2{
-            color: white !important;
-
-            & span{
-                color: white !important;
+        &__inner{
+            & h2{
+                color: white;
             }
+        }
 
-            &::before{
-                background-color: white !important;
-            }
+        &__holizon{
+            background-color: white;
+        }
+
+        &__jaText{
+            color: white;
         }
     }
 

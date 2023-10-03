@@ -5,12 +5,29 @@ import { HomeWorks } from "@/app/Home/components/Works/Works"
 import { HomeRecruit } from "@/app/Home/components/Recruit/Recruit"
 import { HomeInfo } from "@/app/Home/components/Info/Info"
 import { HomeContact } from "@/app/Home/components/Contact/Contact"
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle"
 
 export const Home = () => {
+
+    const variants = {
+        initial: {
+            opacity: 0,
+            x: 100
+        },
+        whileInView: {
+            opacity: 1,
+            x: 0
+        },
+        transition: {
+            delay: .3,
+            type: "tween"
+        }
+    }
+
     return (
         <>
-            <Hero />
-            <HomeFuture/>
+            <Hero variants={variants}/>
+            <HomeFuture variants={variants}/>
             <HomeService/>
             <HomeWorks/>
             <HomeRecruit/>
@@ -19,3 +36,8 @@ export const Home = () => {
         </>
     )
 }
+
+
+// ②contentsTitleのアニメーションを実装する
+// B.framerMotionを利用してすクロールをトリガーとしてアニメーションさせる。
+// ③Recruitのコンテンツをアニーメーション実装

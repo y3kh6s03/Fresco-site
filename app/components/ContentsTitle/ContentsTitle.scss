@@ -1,0 +1,31 @@
+@use "styles/_globals.scss" as *;
+
+.contents__title {
+    @extend .mb-md;
+
+    &__inner {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        & h2{
+            @extend .font-xl;
+            line-height: 1.1;
+            padding-left: 5px;
+        }
+    }
+
+    &__holizon {
+        display: block;
+        width: 450px;
+        height: 1px;
+        background-color: $cBlack;
+        transform-origin: left;
+    }
+
+    &__jaText {
+        @extend .font-md;
+        line-height: 2.5;
+        display: block;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+}

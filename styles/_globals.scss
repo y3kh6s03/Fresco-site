@@ -164,37 +164,3 @@ li {
 a {
     text-decoration: none;
 }
-
-.contents__title {
-    @extend .mb-md;
-
-    & h2 {
-        @extend .font-xl;
-        color: $cBlack;
-        position: relative;
-
-        &::before {
-            content: "";
-            width: 30px;
-            height: 1px;
-            position: absolute;
-            bottom: 36%;
-            left: 0;
-            background-color: $cBlack;
-
-            @include mq(md) {
-                bottom: 35%;
-            }
-
-            @include mq(xl) {
-                bottom: 28%;
-            }
-        }
-    }
-
-    & span {
-        display: block;
-        color: $cBlack;
-        @extend .font-md;
-    }
-}

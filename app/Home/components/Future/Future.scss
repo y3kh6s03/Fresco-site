@@ -22,8 +22,25 @@
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
 
-    &__title {
+    & .contents__title{
         padding-top: 200px;
+
+        &__inner{
+            & h2{
+                color: white;
+            }
+        }
+
+        &__holizon{
+            background-color: white;
+        }
+
+        &__jaText{
+            color: white;
+        }
+    }
+
+    &__title {
 
         &__h2{
             color: white !important;

@@ -1,8 +1,22 @@
-import Image from 'next/image'
+"use client"
 
-import styles from './page.module.css'
+import { useEffect } from 'react'
+import Lenis from '@studio-freight/lenis'
+
+
 import { Home } from "app/Home/Home.js"
 const index = () => {
+
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
 
   return (
     <main>

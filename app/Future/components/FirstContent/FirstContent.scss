@@ -7,6 +7,7 @@
 
     & .future__title {
         @extend .mb-lg;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
         &__h2 {
             @extend .font-xl;

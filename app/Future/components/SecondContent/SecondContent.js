@@ -1,6 +1,8 @@
-import "app/Future/components/SecondContent/SecondContent.scss";
 
-export const SecondContent = () => {
+import "app/Future/components/SecondContent/SecondContent.scss";
+import { motion } from "framer-motion"
+
+export const SecondContent = ({ref, transformYValue}) => {
     return (
         <section className="secondContent container">
 
@@ -21,9 +23,12 @@ export const SecondContent = () => {
                     </p>
                 </div>
                 <div className="secondContent__inner__image">
-                    <div className="secondContent__inner__image__img">
+                    <motion.div
+                    ref={ref}
+                    style={{y: transformYValue}}
+                    className="secondContent__inner__image__img">
                         <img src="/images/Future/healthy.jpg" alt="secondContent__image" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

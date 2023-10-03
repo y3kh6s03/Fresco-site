@@ -4,12 +4,13 @@ import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, stagger, useAnimate } from "framer-motion";
 
 import heroItems from "app/components/Header/Header.json"
 import "app/Home/components/Hero/Hero.scss"
 import { HomeAbout } from "@/app/Home/components/About/About"
 
-export const Hero = () => {
+export const Hero = ({ variants }) => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -24,13 +25,10 @@ export const Hero = () => {
             scrollTrigger: {
                 trigger: ".hero",
                 start: "bottom center+=40%",
-                toggleActions: "play none none reverse",
-                // markers: true
+                toggleActions: "play none none reverse"
             }
         })
     }, [])
-
-
 
 
     return (
@@ -67,21 +65,25 @@ export const Hero = () => {
                 <nav className="hero__nav">
                     <ul className="hero__nav__ul">
                         {
-                            heroItems.map((heroItem) => {
+                            heroItems.map((heroItem, index) => {
                                 return (
-                                    <li key={heroItem.title} className={`hero__nav__li ${heroItem.title}`}>
+                                    <motion.li
+                                        initial={{ x: 100, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        transition={{ delay: 1.5 + 0.05 * index, type: "tween", ease: [0.83, 0, 0.17, 1] }}
+                                        key={heroItem.title} className={`hero__nav__li ${heroItem.title}`}>
                                         <Link href={heroItem.url}>
                                             {heroItem.title}
                                             <span>{heroItem.jaTitle}</span>
                                         </Link>
-                                    </li>
+                                    </motion.li>
                                 )
                             })
                         }
                     </ul>
                 </nav>
             </div>
-            <HomeAbout />
+            <HomeAbout variants={variants} />
         </>
     )
 }

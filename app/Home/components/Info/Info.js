@@ -1,5 +1,6 @@
 
 import { MdButton } from "@/app/components/Button/Button";
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle";
 
 import "app/Home/components/Info/Info.scss";
 import Link from "next/link";
@@ -7,14 +8,7 @@ import Link from "next/link";
 export const HomeInfo = () => {
     return (
         <section className="homeInfo container">
-            <div className="homeInfo__title contents__title">
-                <h2 className="homeInfo__title__h2">
-                    Infomation
-                    <span className="homeInfo__title__span">
-                        インフォメーション
-                    </span>
-                </h2>
-            </div>
+            <ContentsTitle enTitle={"Infomation"} jaTitle={"インフォメーション"}/>
 
             <div className="homeInfo__link">
 
