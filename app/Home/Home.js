@@ -36,8 +36,3 @@ export const Home = () => {
         </>
     )
 }
-
-
-// ②contentsTitleのアニメーションを実装する
-// B.framerMotionを利用してすクロールをトリガーとしてアニメーションさせる。
-// ③Recruitのコンテンツをアニーメーション実装
