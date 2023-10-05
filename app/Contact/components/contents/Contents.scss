@@ -1,0 +1,200 @@
+@use "styles/_globals.scss" as *;
+
+
+.contents {
+    @extend .mb-lg;
+
+    &__title {
+        @extend .font-lg;
+        @extend .mb-md;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 80%;
+            height: 1px;
+            background-color: $cBlack;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__form {
+        max-width: 650px;
+        margin: 0 auto;
+
+
+        &__item {
+            margin: 0 auto 20px;
+            display: flex;
+            flex-direction: column;
+
+            & label {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            & input,
+            & textarea {
+                height: 35px;
+                padding-left: 5%;
+                border-style: none;
+                border-radius: 5px;
+            }
+
+            & textarea {
+                height: 150px;
+                @extend .mb-md;
+
+                &::placeholder {
+                    font-weight: normal;
+                }
+            }
+        }
+
+        &__policy {
+
+            & h3 {
+                @extend .mb-sm;
+                text-align: center;
+            }
+
+            & p {
+                @extend .mb-sm;
+                height: 300px;
+                overflow: scroll;
+                background-color: white;
+                padding: 10% 5%;
+                border-radius: 10px;
+                border: 10px solid rgb(255, 255, 255);
+            }
+        }
+
+
+        &__checkbox {
+            text-align: center;
+            @extend .mb-md;
+        }
+
+        &__button {
+            width: 60vw;
+            max-width: 250px;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                width: 95%;
+                height: 1px;
+                background-color: $cBlack;
+                position: absolute;
+                bottom: 45%;
+                left: 0;
+                transform: scaleX(5%);
+                transform-origin: left;
+                animation: outHolizonAnimation .5s forwards;
+
+                @keyframes outHolizonAnimation {
+                    0% {
+                        transform: scaleX(30%);
+                        transform-origin: right;
+                    }
+
+                    50% {
+                        transform: scaleX(100%);
+                        transform-origin: right;
+                    }
+
+                    51% {
+                        transform: scaleX(100%);
+                        transform-origin: left;
+                    }
+
+                    100% {
+                        transform-origin: left;
+                        transform: scaleX(5%);
+                    }
+                }
+            }
+
+            & button {
+                @extend .font-lg;
+                display: block;
+                border-style: none;
+                background-color: transparent;
+                position: relative;
+            }
+
+            &__enText {
+                display: block;
+                padding-right: 5%;
+                text-align: end;
+                transform: translateY(100%);
+                transition: all .5s .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            }
+
+            &__arrow {
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 1px;
+                    background-color: $cBlack;
+                    position: absolute;
+                    bottom: 45%;
+                    right: 0;
+                }
+
+
+                &::before {
+                    transform: translateY(-3px) rotate(45deg);
+                }
+
+                &::after {
+                    transform: translateY(3px) rotate(-45deg);
+                }
+            }
+
+
+            &:hover {
+                &::before {
+                    animation: hoverHolizonAnimation .5s forwards;
+
+                    @keyframes hoverHolizonAnimation {
+                        0% {
+                            transform: scaleX(5%);
+                            transform-origin: left;
+                        }
+
+                        50% {
+                            transform: scaleX(100%);
+                            transform-origin: left;
+                        }
+
+                        51% {
+                            transform: scaleX(100%);
+                            transform-origin: right;
+                        }
+
+                        100% {
+                            transform: scaleX(30%);
+                            transform-origin: right;
+                        }
+                    }
+                }
+
+                & .contents__form__button__enText {
+                    transform: translateY(0%);
+                }
+            }
+        }
+    }
+}
