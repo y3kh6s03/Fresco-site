@@ -32,7 +32,13 @@ export const SubPageHero = ({ item }) => {
             </section>
 
             <h3 className="subPageHero__headline">
-                {item.headline}
+                {item.headline.split("\n").map((text, index)=>{
+                    return(
+                        <span key={index}>
+                            {text}<br/>
+                        </span>
+                    )
+                })}
             </h3>
         </>
     )
