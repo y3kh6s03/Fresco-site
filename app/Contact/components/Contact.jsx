@@ -1,4 +1,5 @@
-import { Contents } from "@/app/Contact/components/contents/Contents"
+
+import { Form } from "@/app/Contact/components/Form/Form"
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero"
 
 export const Contact = () => {
@@ -13,7 +14,7 @@ export const Contact = () => {
     return (
         <>
             <SubPageHero item={contactHero} />
-            <Contents />
+            <Form />
         </>
     )
 }

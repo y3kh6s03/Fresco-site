@@ -1,10 +1,11 @@
 "use client"
 
-import "app/Contact/components/contents/Contents.scss"
+import { Confirmation } from "@/app/Contact/components/Confirmation/Confirmation";
+import "app/Contact/components/Form/Form.scss"
 import { useRouter } from "next/navigation"
 import { useState } from "react";
 
-export const Contents = () => {
+export const Form = () => {
 
     const [formText, setFormText] = useState({
         name: "",
@@ -15,8 +16,9 @@ export const Contents = () => {
     });
 
     const formSubmit = (e) => {
+
         e.preventDefault();
-        const {name, furigana, mail, tel, text} = e.target;
+        const { name, furigana, mail, tel, text } = e.target;
         setFormText({
             name: name.value,
             furigana: furigana.value,
@@ -24,7 +26,10 @@ export const Contents = () => {
             tel: tel.value,
             text: text.value,
         })
-        console.log(formText);
+
+        if (e.nativeEvent.submitter.id === "formText__confirmation") {
+            console.log(formText)
+        }
     }
 
     return (
@@ -109,7 +114,7 @@ export const Contents = () => {
                 </div>
                 <div className="contents__form__button">
                     <button
-                        type="submit" name="form__submit" value={formText}>
+                        type="submit" name="form__submit" id="formText__confirmation">
                         確認画面へ進む
                     </button >
                     <span className="contents__form__button__enText">
@@ -117,6 +122,8 @@ export const Contents = () => {
                     </span>
                     <span className="contents__form__button__arrow"></span>
                 </div>
+
+                <Confirmation formText={formText}/>
 
             </form>
 
