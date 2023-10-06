@@ -1,8 +1,14 @@
 import "app/Contact/components/Confirmation/Confirmation.scss";
 
-export const Confirmation = ({ formText }) => {
+export const Confirmation = ({ formText, show }) => {
+
+    const [isShow, setIsShow] = show;
+
+    const showForm = () => {
+        setIsShow(true)
+    }
     return (
-        <section className="confirmation">
+        <section className={isShow ? "confirmation__hidden" : "confirmation"}>
             <h3 className="confirmation__title">
                 お問い合わせ内容
             </h3>
@@ -32,7 +38,7 @@ export const Confirmation = ({ formText }) => {
                     </tr>
                 </tbody>
             </table>
-            <button className="modification__button">問い合わせ内容の修正</button>
+            <button type="button" onClick={showForm} className="modification__button">問い合わせ内容の修正</button>
             <button className="submit__button">送信</button>
         </section>
     )

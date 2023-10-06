@@ -1,7 +1,7 @@
 @use "styles/_globals.scss" as *;
 
 
-.contents {
+.form {
     @extend .mb-lg;
 
     &__title {
@@ -25,6 +25,21 @@
     &__form {
         max-width: 650px;
         margin: 0 auto;
+
+        & .form__hidden{
+            animation: formAnimation .5 forwards;
+            @keyframes formAnimation {
+                0%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                100%{
+                    opacity: 0;
+                    display: none;
+                    transform: translateY(-100%);
+                }
+            }
+        }
 
 
         &__item {
