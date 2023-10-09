@@ -26,14 +26,16 @@
         max-width: 650px;
         margin: 0 auto;
 
-        & .form__hidden{
+        & .form__hidden {
             animation: formAnimation .5 forwards;
+
             @keyframes formAnimation {
-                0%{
+                0% {
                     opacity: 1;
                     transform: translateY(0);
                 }
-                100%{
+
+                100% {
                     opacity: 0;
                     display: none;
                     transform: translateY(-100%);
@@ -50,6 +52,15 @@
             & label {
                 font-weight: bold;
                 margin-bottom: 5px;
+
+                & span {
+                    content: "必須";
+                    color: white;
+                    padding: 2px 8px;
+                    margin-left: 20px;
+                    background-color: $cOrange;
+                    border-radius: 5px;
+                }
             }
 
             & input,
@@ -139,11 +150,12 @@
             }
 
             & button {
-                @extend .font-lg;
+                @extend .font-md;
                 display: block;
                 border-style: none;
                 background-color: transparent;
                 position: relative;
+                cursor: pointer;
             }
 
             &__enText {
@@ -206,7 +218,7 @@
                     }
                 }
 
-                & .contents__form__button__enText {
+                & .form__form__button__enText {
                     transform: translateY(0%);
                 }
             }

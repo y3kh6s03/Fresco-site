@@ -38,7 +38,7 @@ export const Form = () => {
         return data;
     }
     const localStrageData = localDatas();
-    console.log(localStrageData)
+
 
     return (
         <section className="form container">
@@ -49,28 +49,28 @@ export const Form = () => {
                     お問い合わせフォーム
                 </h3>
                 <div className="form__form__item">
-                    <label htmlFor="name">お名前</label>
-                    <input id="name" type="text" name="name" placeholder="お名前（フルネーム）" value={localStrageData.name ? localStrageData.name : formData.name} onChange={handleChange} />
+                    <label htmlFor="name">お名前<span>必須</span></label>
+                    <input id="name" type="text" name="name" placeholder="お名前（フルネーム）" value={localStrageData.name ? localStrageData.name : formData.name} onChange={handleChange} required/>
                 </div>
 
                 <div className="form__form__item">
-                    <label htmlFor="name">フリガナ</label>
-                    <input id="furigana" type="text" name="furigana" placeholder="ふりがな（カタカナ）" value={localStrageData.furigana ? localStrageData.furigana : formData.furigana} onChange={handleChange} />
+                    <label htmlFor="name">フリガナ<span>必須</span></label>
+                    <input id="furigana" type="text" name="furigana" placeholder="フリガナ（カタカナ）" value={localStrageData.furigana ? localStrageData.furigana : formData.furigana} onChange={handleChange} required/>
                 </div>
 
                 <div className="form__form__item">
                     <label htmlFor="name">電話番号</label>
-                    <input id="tel" type="tel" name="tel" placeholder="電話番号（ハイフンなし）" value={localStrageData.tel ? localStrageData.tel : formData.tel} onChange={handleChange} />
+                    <input id="tel" type="tel" name="tel" placeholder="電話番号（ハイフンなし）" value={localStrageData.tel ? localStrageData.tel : formData.tel} onChange={handleChange} required/>
                 </div>
 
                 <div className="form__form__item">
-                    <label htmlFor="name">メールアドレス</label>
-                    <input id="mail" type="text" name="mail" placeholder="メールアドレス（例：example@example.com）" value={localStrageData.mail ? localStrageData.mail : formData.mail} onChange={handleChange} />
+                    <label htmlFor="name">メールアドレス<span>必須</span></label>
+                    <input id="mail" type="text" name="mail" placeholder="メールアドレス（例：example@example.com）" value={localStrageData.mail ? localStrageData.mail : formData.mail} onChange={handleChange} required/>
                 </div>
 
                 <div className="form__form__item">
-                    <label htmlFor="name">お問い合わせ内容</label>
-                    <textarea id="text" type="text" name="text" placeholder="お問い合わせ内容をご記入ください" value={localStrageData.text ? localStrageData.text : formData.text} onChange={handleChange} />
+                    <label htmlFor="name">お問い合わせ内容<span>必須</span></label>
+                    <textarea id="text" type="text" name="text" placeholder="お問い合わせ内容をご記入ください" value={localStrageData.text ? localStrageData.text : formData.text} onChange={handleChange} required/>
                 </div>
 
                 <div className="form__form__policy">
