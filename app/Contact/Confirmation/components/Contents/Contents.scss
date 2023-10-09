@@ -1,0 +1,171 @@
+@use "styles/_globals.scss" as *;
+
+.confirmation {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 200px;
+    overflow: hidden;
+
+    @include mq(lg) {
+        max-width: 850px;
+    }
+
+    @include mq(xl) {
+        max-width: 960px;
+    }
+
+
+    &__title {
+        @extend .font-lg;
+        @extend .mb-md;
+        margin-top: 200px;
+        text-align: center;
+    }
+
+    &__list {
+        width: 100%;
+        @extend .mb-md;
+
+        &__item {
+            width: 100%;
+            display: block;
+            @extend .mb-sm;
+            text-align: left;
+
+            & th {
+                width: 500px;
+            }
+
+            & td {
+                display: inline-block;
+                width: 100%;
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+        }
+    }
+
+    &__button__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    & .return {
+        display: block;
+        width: 200px;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+
+        &__jaText {
+            display: block;
+            text-align: end;
+        }
+
+        &__holizon {
+            display: block;
+            text-align: end;
+            width: 100%;
+            height: 1px;
+            background-color: $cBlack;
+            transform: scaleX(10%);
+            transform-origin: right;
+            animation: reHolizonOut 1s cubic-bezier(0.83, 0, 0.17, 1)forwards;
+        }
+
+        @keyframes reHolizonOut {
+            0%{
+                transform: scaleX(10%);
+                transform-origin: left;
+            }
+            50%{
+                transform: scaleX(100%);
+                transform-origin: left;
+            }
+            51%{
+                transform: scaleX(100%);
+                transform-origin: right;
+            }
+            100%{
+                transform: scaleX(10%);
+                transform-origin: right;
+            }
+        }
+
+        &__enText {
+            display: block;
+            text-align: start;
+            padding-left: 20px;
+            transform: translateY(100%);
+            transition: all 1s .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        &__arrow {
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+
+            &::before,
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 10px;
+                height: 1px;
+                background-color: $cBlack;
+                position: absolute;
+            }
+
+            &::before {
+                transform: rotate(325deg);
+                top: calc(50% - 3px);
+                left: 0;
+            }
+
+            &::after {
+                transform: rotate(40deg);
+                bottom: calc(50% - 3.5px);
+                left: 0;
+
+            }
+        }
+
+        &:hover{
+
+            & .return__enText{
+                transform: translateY(0);
+            }
+
+            & .return__holizon{
+                animation: reHolizonHover 1s cubic-bezier(0.83, 0, 0.17, 1)forwards;
+            }
+
+            @keyframes reHolizonHover {
+                0%{
+                    transform: scaleX(10%);
+                    transform-origin: right;
+                }
+                50%{
+                    transform: scaleX(100%);
+                    transform-origin: right;
+                }
+                51%{
+                    transform: scaleX(100%);
+                    transform-origin: left;
+                }
+                100%{
+                    transform: scaleX(10%);
+                    transform-origin: left;
+                }
+            }
+        }
+
+    }
+
+
+
+
+    & .submit__button {}
+}
