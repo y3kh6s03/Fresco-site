@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { createContext, useRef } from "react"
 import { useScroll, useTransform } from "framer-motion"
 
 
@@ -14,22 +14,33 @@ export const Future = () => {
     const FutureHeroItem = {
         enTitle: "Future",
         jaTitle: "私たちのこれから",
-        src: "/images/Future/FutureHero.jpg"
+        src: "/images/Future/FutureHero.jpg",
+        headline: ""
     }
 
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref
+    const firstRef = useRef(null);
+    const secondRef = useRef(null);
+    const thirdRef = useRef(null);
+    const { scrollYProgress: scrollYProgress1 } = useScroll({
+        target: firstRef
     });
-    const transformYValue = useTransform(scrollYProgress, [0, 1], [0, 50])
-    const transformXValue = useTransform(scrollYProgress, [0, 1], [0, 30])
+    const { scrollYProgress: scrollYProgress2 } = useScroll({
+        target: secondRef
+    });
+    const { scrollYProgress: scrollYProgress3 } = useScroll({
+        target: thirdRef
+    });
+    const transformYValue1 = useTransform(scrollYProgress1, [0, 1], [0, 30])
+    const transformYValue2 = useTransform(scrollYProgress2, [0, 1], [0, 50])
+    const transformYValue3 = useTransform(scrollYProgress3, [0, 1], [0, 50])
+    const transformXValue1 = useTransform(scrollYProgress1, [0, 1], [0, 20])
 
     return (
         <>
             <SubPageHero item={FutureHeroItem} />
-            <FirstContent ref={ref} transformXValue={transformXValue} transformYValue={transformYValue}/>
-            <SecondContent ref={ref} transformXValue={transformXValue} transformYValue={transformYValue}/>
-            <ThirdContent ref={ref} transformXValue={transformXValue} transformYValue={transformYValue}/>
+            <FirstContent ref={firstRef} transformXValue={transformXValue1} transformYValue={transformYValue1} />
+            <SecondContent ref={secondRef} transformYValue={transformYValue2} />
+            <ThirdContent ref={thirdRef} transformYValue={transformYValue3} />
         </>
     )
 }

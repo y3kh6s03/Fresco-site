@@ -10,7 +10,8 @@ export const About = () => {
     const AboutHeroItem = {
         enTitle: "About",
         jaTitle: "私たちについて",
-        src: "/images/About/AboutHero.jpg"
+        src: "/images/About/AboutHero.jpg",
+        headline: ""
     }
     return (
         <>
