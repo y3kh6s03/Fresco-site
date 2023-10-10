@@ -2,9 +2,9 @@ import "app/components/Button/Button.scss";
 import Link from "next/link";
 
 
-export const LgButton = ({ href, buttonName }) => {
+export const LgButton = ({ buttonName }) => {
     return (
-        <Link href={href} className="lgbutton">
+        <Link href={buttonName} className="lgbutton">
             <span className="lgbutton__name">{buttonName}</span>
             <span className="lgbutton__holizon"></span>
             <span className="lgbutton__arrow"></span>
