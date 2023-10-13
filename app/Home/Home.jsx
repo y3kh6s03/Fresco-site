@@ -30,7 +30,7 @@ export const Home = () => {
             <HomeFuture variants={variants}/>
             <HomeService/>
             <HomeWorks/>
-            <HomeRecruit/>
+            <HomeRecruit variants={variants}/>
             <HomeInfo/>
             <HomeContact/>
         </>

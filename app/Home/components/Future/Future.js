@@ -8,7 +8,7 @@ import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle"
 
-export const HomeFuture = ({variants}) => {
+export const HomeFuture = ({ variants }) => {
 
     useEffect(() => {
 
@@ -43,23 +43,22 @@ export const HomeFuture = ({variants}) => {
 
     return (
         <section className="homeFuture container">
-            <ContentsTitle enTitle={"Future"} jaTitle={"私たちのこれから"}/>
+            <ContentsTitle enTitle={"Future"} jaTitle={"私たちのこれから"} />
             <div className="homeFuture__path">
                 <motion.div
-
-                className="homeFuture__description">
+                    className="homeFuture__description">
                     <h3 className="homeFuture__description__headline">
                         食を通じて、すこやかな未来をつくりたい
                     </h3>
                     <motion.p
-                    variants={variants}
-                    initial="initial"
-                    whileInView="whileInView"
-                    transition={{
-                        delay: .5,
-                        type: "tween"
-                    }}
-                    className="homeFuture__description__p">
+                        variants={variants}
+                        initial="initial"
+                        whileInView="whileInView"
+                        transition={{
+                            delay: .5,
+                            type: "tween"
+                        }}
+                        className="homeFuture__description__p">
                         食事からとる栄養は、生きていくために欠かせないものです。<br />しかし、生きるために必要なことは
                         食事だけではありません。健康づくりや地球環境保全など人生のためのあらゆる物事を、食事を
                         通じてよりよくしていきたい。<br />
