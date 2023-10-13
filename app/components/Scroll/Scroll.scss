@@ -9,7 +9,7 @@
         display: block;
         width: 150px;
         height: 1px;
-        background-color: $cBlack;
+        background-color: white;
         transform: scaleX(0);
         animation: holizonBarAnimation 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
 
@@ -33,5 +33,7 @@
 
         }
     }
-    &__text{}
+    &__text{
+        color: white;
+    }
 }

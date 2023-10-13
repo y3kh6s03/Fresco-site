@@ -66,7 +66,7 @@ export const HomeFuture = ({variants}) => {
                         フレスコカンパニーは、”食べる”を通じて今を生きる私たちや未来の
                         子供たちに笑顔あふれる人生を提供します。
                     </motion.p>
-                    <LgButton href={"#"} buttonName={"Future"} />
+                    <LgButton href={"/Future"} buttonName={"Future"} />
                     <div className="homeFuture__description__image"></div>
                 </motion.div>
             </div>

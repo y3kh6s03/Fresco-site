@@ -3,13 +3,20 @@
 .homeWorks {
     width: 100vw;
     height: 100vh;
-    max-height: 900px;
+    max-height: 700px;
     position: relative;
     @extend .mb-lg;
 
+    @include mq(lg){
+        max-height: 750px;
+    }
+    @include mq(xl){
+        max-height: 800px;
+    }
+
     &::before {
         content: "";
-        width: 70%;
+        width: 80%;
         height: 100%;
         background-color: $cGreen;
         position: absolute;
@@ -45,10 +52,15 @@
         }
 
         & img {
+            width: 350px;
             height: 350px;
             object-fit: cover;
             object-position: center;
             position: relative;
+
+            @include mq(lg){
+                width: 400px;
+            }
         }
 
         & span {
@@ -64,7 +76,8 @@
             left: 10%;
 
             &:nth-of-type(1) {
-                bottom: 40%;
+                bottom: 15%;
+                font-weight: bold;
             }
 
             &:nth-of-type(2) {
@@ -78,7 +91,17 @@
     }
 
     &__holizonScroll {
-        bottom: 150px;
-        right: 0;
+        bottom: 50px;
+        right: 5%;
+
+        @include mq(lg){
+            bottom: 100px;
+            right: 15%;
+        }
+
+        @include mq(xl){
+            right: 25%;
+
+        }
     }
 }

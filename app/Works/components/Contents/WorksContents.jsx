@@ -7,7 +7,7 @@ export const WorksContents = () => {
             {
                 workContentsItem.map((workContentItem, index) => {
                     return (
-                        <section key={index} className="worksContents container">
+                        <section id={workContentItem.enTitle} key={index} className="worksContents container">
                             <div className="worksContents__inner">
                                 <div className="worksContents__inner__title">
                                     <h3 className="worksContents__inner__title__h3">

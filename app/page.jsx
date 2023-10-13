@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import Lenis from '@studio-freight/lenis'
 
 
-import { Home } from "app/Home/Home.js"
+import { Home } from "app/Home/Home"
 const index = () => {
 
 

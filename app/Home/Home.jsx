@@ -12,7 +12,7 @@ export const Home = () => {
     const variants = {
         initial: {
             opacity: 0,
-            x: 100
+            x: 50
         },
         whileInView: {
             opacity: 1,
