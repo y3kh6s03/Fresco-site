@@ -5,7 +5,8 @@ export const Works = () => {
     const worksHeroItem = {
         enTitle: "Works",
         jaTitle: "わたしたちのアーカイブ",
-        src: "/images/Works/WorksHero.jpg"
+        src: "/images/Works/WorksHero.jpg",
+        headline: ""
     }
     return (
         <>

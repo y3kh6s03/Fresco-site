@@ -7,12 +7,12 @@ import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle"
 export const HomeService = () => {
     return (
         <section className="homeService container">
-<ContentsTitle enTitle={"Service"} jaTitle={"私たちの事業について"}/>
+            <ContentsTitle enTitle={"Service"} jaTitle={"私たちの事業について"} />
 
             <ul className="homeService__ul">
                 {homeServiceItems.map((homeServiceItem, index) => {
                     return (
-                        <li key={index}className={`homeService__ul__li ${homeServiceItem.enTitle.toLowerCase()}`}>
+                        <li key={index} className={`homeService__ul__li ${homeServiceItem.enTitle.toLowerCase()}`}>
                             <div className="homeService__ul__li__image">
                                 <img src={homeServiceItem.src} alt="" />
                                 <p>Service <span>{homeServiceItem.num}</span></p>

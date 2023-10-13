@@ -3,14 +3,14 @@
         "num": "01",
         "enTitle": "Kyushoku",
         "jaTitle": "給食受託事業",
-        "href": "#",
+        "href": "/Service/Kyushoku",
         "src": "/images/Home/kyushoku.jpg"
     },
     {
         "num": "02",
         "enTitle": "Support",
         "jaTitle": "直営給食サポート事業",
-        "href": "#",
+        "href": "/Service/Support",
         "src": "/images/Home/dietician3.jpg"
 
     },
@@ -18,14 +18,14 @@
         "num": "03",
         "enTitle": "Catering",
         "jaTitle": "ケータリング事業",
-        "href": "#",
+        "href": "/Service/Catering",
         "src": "/images/Home/catering3.jpg"
     },
     {
         "num": "04",
         "enTitle": "Frozen yogurt",
         "jaTitle": "フローズンヨーグルト事業",
-        "href": "#",
+        "href": "/Service/Frozen-yogurt",
         "src": "/images/Home/frozen.jpg"
 
     }

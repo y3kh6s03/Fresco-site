@@ -5,7 +5,8 @@ export const Service = () => {
     const serviceHero = {
         enTitle: "Service",
         jaTitle: "わたしたちの出来ること",
-        src: "/images/Service/ServiceHero.jpg"
+        src: "/images/Service/ServiceHero.jpg",
+        headline: ""
     }
     return (
         <>

@@ -19,13 +19,13 @@ export const Header = () => {
 
     return (
         <>
-            <div className="header">
+            {/* <div className="header"> */}
                 <Link className="header__logo" href="/"></Link>
                 <div className={`header__menu__icon ${isOpen ? "isOpen" : ""}`} onClick={toggleMobileMenu}>
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+            {/* </div> */}
 
             <nav className={`header__nav ${isOpen ? "isOpen" : ""}`}>
                 <p>

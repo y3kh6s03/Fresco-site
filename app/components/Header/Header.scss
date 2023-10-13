@@ -1,62 +1,65 @@
 @use "styles/_globals.scss" as *;
 
-.header {
-    width: 100vw;
-    max-width: 1440px;
-    height: 130px;
-    padding: 0 5%;
-    margin: 0 auto;
+// .header {
+//     width: 100vw;
+//     max-width: 1440px;
+//     height: 130px;
+//     padding: 0 5%;
+//     margin: 0 auto;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     z-index: 100;
+
+.header__logo {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url(/images/logo/logo-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    top: 3%;
+    left: 5%;
     z-index: 100;
+}
 
-    .header.overlay{
-        pointer-events: none;
-    }
+.header__menu__icon {
+    width: 35px;
+    height: 35px;
+    // position: relative;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 100;
+    cursor: pointer;
 
-    &__logo {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        background-image: url(/images/logo/logo-1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    &__menu__icon {
+    & span {
         width: 35px;
-        height: 35px;
-        position: relative;
-        z-index: 100;
-        cursor: pointer;
+        height: 1px;
+        background-color: $cBlack;
+        mix-blend-mode: difference;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: transform 1s cubic-bezier(0.83, 0, 0.17, 1);
+        mix-blend-mode: darken;
 
-        & span {
-            width: 35px;
-            height: 1px;
-            background-color: $cBlack;
-            mix-blend-mode: difference;
-            display: inline-block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transition: transform 1s cubic-bezier(0.83, 0, 0.17, 1);
-            mix-blend-mode: darken;
+        &:nth-child(1) {
+            transform: translate(-50%, 2px);
+        }
 
-            &:nth-child(1) {
-                transform: translate(-50%, 2px);
-            }
-
-            &:nth-child(2) {
-                transform: translate(-50%, -2px);
-            }
+        &:nth-child(2) {
+            transform: translate(-50%, -2px);
         }
     }
 }
+// }
 
 .header__nav {
     width: 70vw;
@@ -71,7 +74,7 @@
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
     cursor: pointer;
 
-    @include mq(lg){
+    @include mq(lg) {
         width: 40vw;
     }
 
@@ -82,7 +85,7 @@
         @extend .mb-md;
         position: relative;
 
-        &::before{
+        &::before {
             content: "";
             width: 100%;
             height: 1px;
@@ -136,7 +139,7 @@
         }
     }
 
-    &.header__nav{
+    &.header__nav {
         transform: translateX(0);
     }
 }
