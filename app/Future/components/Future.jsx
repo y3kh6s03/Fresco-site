@@ -4,9 +4,9 @@ import { createContext, useRef } from "react"
 import { useScroll, useTransform } from "framer-motion"
 
 
-import { FirstContent } from "@/app/Future/components/FirstContent/FirstContent"
-import { SecondContent } from "@/app/Future/components/SecondContent/SecondContent"
-import { ThirdContent } from "@/app/Future/components/ThirdContent/ThirdContent"
+import { Content } from "@/app/Future/components/Content/Content"
+// import { SecondContent } from "@/app/Future/components/SecondContent/SecondContent"
+// import { ThirdContent } from "@/app/Future/components/ThirdContent/ThirdContent"
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero"
 
 export const Future = () => {
@@ -38,9 +38,9 @@ export const Future = () => {
     return (
         <>
             <SubPageHero item={FutureHeroItem} />
-            <FirstContent ref={firstRef} transformXValue={transformXValue1} transformYValue={transformYValue1} />
-            <SecondContent ref={secondRef} transformYValue={transformYValue2} />
-            <ThirdContent ref={thirdRef} transformYValue={transformYValue3} />
+            <Content ref={firstRef} transformXValue={transformXValue1} transformYValue={transformYValue1} />
+            {/* <SecondContent ref={secondRef} transformYValue={transformYValue2} />
+            <ThirdContent ref={thirdRef} transformYValue={transformYValue3} /> */}
         </>
     )
 }
