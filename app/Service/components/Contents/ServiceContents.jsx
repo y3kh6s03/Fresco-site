@@ -1,8 +1,9 @@
 
 
 import { LgButton } from "@/app/components/Button/Button"
-import "app/Service/components/Contents/ServiceContents.scss"
 import serviceItems from "app/Service/components/Contents/ServiceContents.json"
+import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle"
+import "app/Service/components/Contents/ServiceContents.scss"
 
 export const ServiceContents = () => {
 
@@ -14,15 +15,7 @@ export const ServiceContents = () => {
                 serviceItems.map((serviceItem) => {
                     return (
                         <section key={serviceItem.enTitle} className="serviceContents container">
-                            <div className="serviceContents__title contents__title">
-                                <h2 className="serviceContents__title__h2">
-                                    {serviceItem.enTitle}
-                                    <span className="serviceContents__title__h2__span">
-                                        {serviceItem.jaTitle}
-                                    </span>
-                                </h2>
-                                <div className="serviceContents__title__image"></div>
-                            </div>
+                            <ContentsTitle enTitle={"Service"} jaTitle={"わたしたちの事業について"}/>
 
                             <div className="serviceContents__inner">
                                 <div className="serviceContents__inner__description">

@@ -11,25 +11,25 @@
     &__link {
 
         @include mq(md){
-            padding: 0 10%;
-            gap: 50px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            gap: 50px;
         }
 
-        & .mdbutton{
+        &__button{
             @extend .mb-md;
+            flex: 1;
+            max-width: 350px;
 
-            @include mq(lg){
-                flex: 1;
-            }
+            & img{
+                height: 200px;
 
-            &__image{
-                height: 250px;
-                @extend .mb-sm;
+                @include mq(lg){
+                    height: 250px;
+                }
             }
         }
+
     }
 
 }

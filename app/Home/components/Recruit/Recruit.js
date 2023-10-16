@@ -1,14 +1,18 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { LgButton } from "@/app/components/Button/Button";
 import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle";
 import "app/Home/components/Recruit/Recruit.scss";
 
 export const HomeRecruit = ({ variants }) => {
+
+    const { scrollYProgress } = useScroll();
+    const scrollY = useTransform(scrollYProgress, [0, 1], [1, 1.5])
+
     return (
         <section className="homeRecruit container">
             <motion.div
-                className="homeRecruit__image"
+                className="homeRecruit__image__container"
                 initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
                 whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                 transition={{
@@ -17,7 +21,14 @@ export const HomeRecruit = ({ variants }) => {
                 }}
                 viewport={{ once: true }}
             >
-
+                <motion.div
+                    inlist={{ scale: 1 }}
+                    style={{ scale: scrollY }}
+                // whileInView={{
+                //     scale: 2
+                // }}
+                >
+                </motion.div>
             </motion.div>
             <div className="homeRecruit__inner">
                 <ContentsTitle enTitle={"Recruit"} jaTitle={"私たちの求人"} />
