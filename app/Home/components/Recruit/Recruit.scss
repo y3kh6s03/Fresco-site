@@ -4,13 +4,10 @@
 .homeRecruit {
     @extend .mb-lg;
 
-    &__image {
+    &__image__container {
         width: 90vw;
         height: 200px;
-        margin-left: calc(65% - 50vw);
-        background-image: url(/images/Home/student_hero.jpg);
-        background-position: center;
-        background-size: cover;
+        margin-left: calc(70% - 50vw);
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 
         @include mq(md) {
@@ -22,7 +19,21 @@
         @include mq(lg) {
             width: 65vw;
             height: 400px;
-            margin-left: calc(90% - 50vw);
+            margin-left: calc(103% - 50vw);
+        }
+
+        @include mq(xl) {
+            max-width: 900px;
+            height: 400px;
+            margin-left: calc(103% - 50vw);
+        }
+
+        & div {
+            width: 100%;
+            height: 100%;
+            background-image: url(/images/Home/student_hero.jpg);
+            background-position: center;
+            background-size: cover;
         }
     }
 

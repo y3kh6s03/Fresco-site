@@ -7,7 +7,7 @@ import "app/components/SubPageHero/SubPageHero.scss"
 export const SubPageHero = ({ item }) => {
     return (
         <>
-            <section className="subPageHero">
+            <section className="subPageHero" id="hero">
                 <div className="subPageHero__title">
                     <motion.h1
                         initial={{ y: "-150%" }}

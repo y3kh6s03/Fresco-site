@@ -109,6 +109,12 @@ $cBlue: #AACBD0;
 /////////////////////////////////////
 // Base setting
 /////////////////////////////////////
+html{
+    scroll-behavior: smooth;
+}
+
+
+
 * {
     font-size: 14px;
     line-height: 1.7;

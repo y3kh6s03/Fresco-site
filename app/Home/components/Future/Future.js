@@ -15,7 +15,6 @@ export const HomeFuture = ({ variants }) => {
         gsap.registerPlugin(ScrollTrigger);
 
         const vh = window.innerHeight;
-        console.log(vh)
 
         gsap.to(".homeFuture__path", {
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",

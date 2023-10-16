@@ -33,7 +33,7 @@ export const Hero = ({ variants }) => {
 
     return (
         <>
-            <div className="hero loading">
+            <div className="hero loading" id="hero">
                 <div className="hero__title">
                     <div className="hero__title__inner">
                         <span className="hero__title__inner__span">

@@ -1,0 +1,20 @@
+[
+    {
+        "href": "#",
+        "buttonEnName": "Support",
+        "buttonJaName": "直営給食サポート事業",
+        "image": "/images/Home/dietician3.jpg"
+    },
+    {
+        "href": "#",
+        "buttonEnName": "Catering",
+        "buttonJaName": "ケータリング事業",
+        "image": "/images/Home/catering3.jpg"
+    },
+    {
+        "href": "https://www.taiseisangyo.com/",
+        "buttonEnName": "Support",
+        "buttonJaName": "直営給食サポート事業",
+        "image": "/images/Home/taisei.jpg"
+    }
+]
