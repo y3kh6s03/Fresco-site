@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-import { ContactButton } from "@/app/components/Button/Button";
+import {ContactButton} from "app/components/Button/Button.jsx"
 import "app/Future/components/ThirdContent/ThirdContent.scss";
 import { forwardRef } from "react";
 

@@ -33,7 +33,7 @@ export const MdButton = ({ href, buttonEnName, buttonJaName, image }) => {
 
 export const ContactButton = ({ }) => {
     return (
-        <Link href={"#"} className="contactButton">
+        <Link href={"/Contact"} className="contactButton">
             <div className="contactButton__text">
                 <span className="contactButton__text__span">お問い合わせ</span>
             </div>
