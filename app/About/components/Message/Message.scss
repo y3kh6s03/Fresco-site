@@ -32,6 +32,10 @@
                 object-fit: cover;
                 object-position: center;
                 @extend .mb-md;
+
+                @include mq(lg){
+                    height: 100%;
+                }
             }
         }
 
