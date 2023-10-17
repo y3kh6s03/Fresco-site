@@ -1,8 +1,8 @@
 "use client"
 import { usePathname } from "next/navigation";
 
-import detailItems from "app/Service/[slug]/components/components/DetailContent.json";
-import { DetailContent } from "@/app/Service/[slug]/components/components/DetailContent";
+import detailItems from "app/Service/[slug]/components/components/Content.json";
+import { Content } from "@/app/Service/[slug]/components/components/Content";
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero";
 
 export const Detail = () => {
@@ -23,7 +23,7 @@ export const Detail = () => {
     return (
         <>
             <SubPageHero item={detailHeroItem} />
-            <DetailContent contentItem={contentItem} />
+            <Content contentItem={contentItem} />
         </>
     )
 }
