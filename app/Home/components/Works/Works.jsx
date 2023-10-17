@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/scss";
 import { Autoplay } from "swiper/modules"
 
-import worksContents from "app/Works/components/Contents/WorksContents.json"
+import Contents from "app/Works/components/Contents/Contents.json"
 import "app/Home/components/Works/Works.scss";
 import { HolizonScroll } from "@/app/components/Scroll/Scroll";
 import { ContentsTitle } from "@/app/components/ContentsTitle/ContentsTitle";
@@ -42,7 +42,7 @@ export const HomeWorks = () => {
                 modules={[Autoplay]}
                 loop={true}
             >
-                {worksContents.map((item, index) => {
+                {Contents.map((item, index) => {
                     return (
                         <SwiperSlide key={index}>
                             <Link href={`/Works#${item.enTitle}`}>

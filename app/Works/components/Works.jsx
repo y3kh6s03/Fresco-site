@@ -1,4 +1,4 @@
-import { WorksContents } from "@/app/Works/components/Contents/WorksContents"
+import { Contents } from "@/app/Works/components/Contents/Contents"
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero"
 
 export const Works = () => {
@@ -11,7 +11,7 @@ export const Works = () => {
     return (
         <>
             <SubPageHero item={worksHeroItem} />
-            <WorksContents />
+            <Contents />
         </>
     )
 }

@@ -14,6 +14,14 @@
                 gap: 50px;
             }
 
+            &__bar{
+                width: 48%;
+                height: 1px;
+                background-color: $cBlack;
+                position: absolute;
+                transform-origin: left;
+            }
+
             &__h3 {
                 position: relative;
                 flex: 1;
@@ -21,20 +29,11 @@
                 white-space: nowrap;
                 z-index: 10;
 
-                &::before {
-                    content: "";
-                    width: 95%;
-                    height: 1px;
-                    background-color: $cBlack;
-                    position: absolute;
-
-                }
-
                 & span {
                     @extend .font-sm;
                     padding: 3px 5px;
                     position: absolute;
-                    bottom: 0;
+                    bottom: 40%;
                     right: 3%;
                     border: 1px solid $cBlack;
                 }
@@ -98,6 +97,10 @@
     & .worksContents__inner {
         &__title {
             flex-direction: row-reverse;
+
+            &__bar{
+                transform-origin: right;
+            }
 
             &__h3 {
                 left: 3%;
