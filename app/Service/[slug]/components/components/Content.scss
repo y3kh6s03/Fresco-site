@@ -73,6 +73,7 @@
     }
 
     &__inner:nth-child(2) {
+        margin-bottom: 150px;
 
         @include mq(lg) {
             display: flex;
