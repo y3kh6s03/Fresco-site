@@ -1,4 +1,4 @@
-import { ServiceContents } from "@/app/Service/components/Contents/ServiceContents"
+import { Contents } from "@/app/Service/components/Contents/Contents"
 import { SubPageHero } from "@/app/components/SubPageHero/SubPageHero"
 
 export const Service = () => {
@@ -11,7 +11,7 @@ export const Service = () => {
     return (
         <>
             <SubPageHero item={serviceHero} />
-            <ServiceContents />
+            <Contents />
         </>
     )
 }
