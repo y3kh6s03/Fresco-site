@@ -1,9 +1,12 @@
 import { Contact } from "@/app/Contact/components/Contact";
+import { PageTransition } from "@/app/components/PageTransition/PageTransition";
 
 const Home = () => {
     return (
         <>
-            <Contact />
+            <PageTransition>
+                <Contact />
+            </PageTransition>
         </>
     )
 }

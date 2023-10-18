@@ -5,7 +5,9 @@
         "customer": "千曲市ワーケーションウエルカムデイズ",
         "image": "/images/Home/catering.jpg",
         "description": "千曲市観光局と株式会社ふろしきやが運営する「千曲市ワーケーションウェルカムデイズ」にて、出張シェフを実施。千曲市・あんずの里や姨捨の棚田などあらゆるロケーションで青空レストランを行いました。",
-        "subImage": "/images/Home/catering2.jpg"
+        "subImage": "/images/Home/catering2.jpg",
+        "ref": "firstRef",
+        "scale": "first"
     },
     {
         "enTitle": "support",
@@ -13,7 +15,9 @@
         "customer": "千曲市ワーケーションウエルカムデイズ",
         "image": "/images/Home/catering.jpg",
         "description": "千曲市観光局と株式会社ふろしきやが運営する「千曲市ワーケーションウェルカムデイズ」にて、出張シェフを実施。千曲市・あんずの里や姨捨の棚田などあらゆるロケーションで青空レストランを行いました。",
-        "subImage": "/images/Home/catering2.jpg"
+        "subImage": "/images/Home/catering2.jpg",
+        "ref": "secondRef",
+        "scale": "second"
     },
     {
         "enTitle": "support",
@@ -21,15 +25,9 @@
         "customer": "千曲市ワーケーションウエルカムデイズ",
         "image": "/images/Home/catering.jpg",
         "description": "千曲市観光局と株式会社ふろしきやが運営する「千曲市ワーケーションウェルカムデイズ」にて、出張シェフを実施。千曲市・あんずの里や姨捨の棚田などあらゆるロケーションで青空レストランを行いました。",
-        "subImage": "/images/Home/catering2.jpg"
-    },
-    {
-        "enTitle": "support",
-        "jaTitle": "直営給食サポートサービス",
-        "customer": "千曲市ワーケーションウエルカムデイズ",
-        "image": "/images/Home/catering.jpg",
-        "description": "千曲市観光局と株式会社ふろしきやが運営する「千曲市ワーケーションウェルカムデイズ」にて、出張シェフを実施。千曲市・あんずの里や姨捨の棚田などあらゆるロケーションで青空レストランを行いました。",
-        "subImage": "/images/Home/catering2.jpg"
+        "subImage": "/images/Home/catering2.jpg",
+        "ref": "thirdRef",
+        "scale": "third"
     },
     {
         "enTitle": "Catering",
@@ -37,6 +35,8 @@
         "customer": "建設コンサルタンツ協会",
         "image": "/images/Works/bento.jpg",
         "description": "建設コンサルタンツ協会若手の会さま向けに、千曲市環境局主催で実施した腸内環境セミナーにて、お弁当のご提供を行いました。当日は、腸内環境に関する健康セミナーの内容に合わせてアレンジした、食物繊維や発酵食品たっぷりのメニューを作成。セミナーの内容を食事で体験し、実感できるコンテンツとしてご好評をいただきました。",
-        "subImage": "/images/Works/location.jpg"
+        "subImage": "/images/Works/location.jpg",
+        "ref": "forthRef",
+        "scale": "forth"
     }
 ]

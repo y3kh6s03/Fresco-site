@@ -9,11 +9,33 @@ import { ContactButton } from "@/app/components/Button/Button";
 
 export const Contents = () => {
 
-    const scrollTarget = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: scrollTarget
+    const scrollTargets = {
+        firstRef: useRef(null),
+        secondRef: useRef(null),
+        thirdRef: useRef(null),
+        forthRef: useRef(null),
+    }
+
+
+    const { scrollYProgress: first } = useScroll({
+        target: scrollTargets.firstRef,
     })
-    const scrollScale = useTransform(scrollYProgress, [0, 1], [1, 2])
+    const { scrollYProgress: second } = useScroll({
+        target: scrollTargets.secondRef,
+    })
+    const { scrollYProgress: third } = useScroll({
+        target: scrollTargets.thirdRef,
+    })
+    const { scrollYProgress: forth } = useScroll({
+        target: scrollTargets.forthRef,
+    })
+
+    const scales = {
+        first : useTransform(first, [0, 1], [1, 1.1]),
+        second : useTransform(second, [0, 1], [1, 1.1]),
+        third : useTransform(third, [0, 1], [1, 1.1]),
+        forth : useTransform(forth, [0, 1], [1, 1.1]),
+    }
 
 
 
@@ -21,9 +43,11 @@ export const Contents = () => {
     return (
         <div className="worksContents__wrapper">
             {
-                workContentsItem.map((workContentItem, index) => {
+                workContentsItem.map((Item, index) => {
+                    const targerRef = scrollTargets[Item.ref]
+                    const scaleStyle = scales[Item.scale]
                     return (
-                        <section id={workContentItem.enTitle} key={index} className="worksContents container">
+                        <section id={Item.enTitle} key={index} className="worksContents container">
                             <div className="worksContents__inner">
                                 <div className="worksContents__inner__title">
                                     <motion.span
@@ -36,8 +60,8 @@ export const Contents = () => {
                                         }}
                                         className="worksContents__inner__title__bar"></motion.span>
                                     <h3 className="worksContents__inner__title__h3">
-                                        {workContentItem.enTitle}
-                                        <span>{workContentItem.jaTitle}</span>
+                                        {Item.enTitle}
+                                        <span>{Item.jaTitle}</span>
                                     </h3>
                                     <motion.div
                                         initial={{ clipPath: "polygon(0 0,0 0, 0 100%, 0 100%)" }}
@@ -50,21 +74,22 @@ export const Contents = () => {
                                         }}
                                         className="worksContents__inner__title__image">
                                         <motion.img
-                                            style={{ scale: scrollScale }}
-                                            src={workContentItem.image} alt="works-image" />
+                                            ref={targerRef}
+                                            style={{ scale: scaleStyle }}
+                                            src={Item.image} alt="works-image" />
                                     </motion.div>
                                 </div>
                                 <h4 className="worksContents__inner__headline">
                                     customer: <br />
-                                    {workContentItem.customer}&nbsp;さま
+                                    {Item.customer}&nbsp;さま
                                 </h4>
                                 <p className="worksContents__inner__description">
-                                    {workContentItem.description}
+                                    {Item.description}
                                 </p>
                             </div>
 
                             <div src="" alt="" className="worksContents__subimage" >
-                                <img src={workContentItem.subImage} alt="works-image" />
+                                <img src={Item.subImage} alt="works-image" />
                             </div>
                         </section>
                     )
