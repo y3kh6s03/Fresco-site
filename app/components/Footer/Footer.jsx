@@ -42,9 +42,9 @@ export const Footer = () => {
                     </table>
                     <div className="footer__nav">
                         <ul className="footer__nav__ul">
-                            {menuItems.map((item) => {
+                            {menuItems.map((item, index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <Link href={item.url}>
                                             {item.title}
                                             <span>{item.jaTitle}</span>
