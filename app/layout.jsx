@@ -29,7 +29,7 @@ export const numFont = Noto_Nastaliq_Urdu({
 
 export const metadata = {
   title: '有限会社 Fresco company',
-  description: '長野県北進を中心として、食の総合サービス提供企業です。',
+  description: '長野県北信を中心として、食の総合サービス提供企業です。',
 }
 
 export default function RootLayout({ children }) {
