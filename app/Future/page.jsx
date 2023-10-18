@@ -1,9 +1,13 @@
 import { Future } from "@/app/Future/components/Future";
+import { PageTransition } from "@/app/components/PageTransition/PageTransition";
 
-const Home =()=>{
-    return(
+const Home = () => {
+    return (
         <>
-        <Future />
+            <PageTransition>
+                <Future />
+            </PageTransition>
+
         </>
     )
 }

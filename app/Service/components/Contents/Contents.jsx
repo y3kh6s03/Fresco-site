@@ -41,12 +41,12 @@ export const Contents = () => {
                                         className="serviceContents__inner__description__p">
                                         {item.description.split("\n").map((splitItem, index) => {
                                             return (
-                                                <>
-                                                    <span key={index}>
+                                                <span  key={index}>
+                                                    <span>
                                                         {splitItem}
                                                     </span>
                                                     <br />
-                                                </>
+                                                </span>
                                             )
                                         })}
                                     </motion.p>
