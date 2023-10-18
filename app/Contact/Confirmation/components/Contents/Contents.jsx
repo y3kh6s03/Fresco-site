@@ -7,14 +7,13 @@ export const Contents = () => {
 
     const keys = ["name", "furigana", "tel", "mail", "text"]
     const strageItems = {};
-
     keys.forEach((key) => {
         const value = localStorage.getItem(key);
         strageItems[key] = value;
     })
 
     return (
-        <section className="confirmation container">
+        <section className="confirmation">
             <h3 className="confirmation__title">
                 お問い合わせ内容
             </h3>
@@ -45,17 +44,22 @@ export const Contents = () => {
                 </tbody>
             </table>
             <div className="confirmation__button__container">
-                <Link href={"/Contact#form__title"} className="return">
-                    <span className="return__jaText">
+                <Link href={"/Contact#form__title"} className="returnBtn">
+                    <span className="returnBtn__jaText">
                         内容の修正
                     </span>
-                    <span className="return__holizon"></span>
-                    <span className="return__enText">
+                    <span className="returnBtn__holizon"></span>
+                    <span className="returnBtn__enText">
                         Edit the content
                     </span>
-                    <span className="return__arrow"></span>
+                    <span className="returnBtn__arrow"></span>
                 </Link>
-                <button className="submit__button">送信</button>
+                <button className="submitBtn">
+                    <span className="submitBtn__jaText">送信</span>
+                    <span className="submitBtn__bar"></span>
+                    <span className="submitBtn__enText">Submit !!</span>
+                    <span className="submitBtn__arrow"></span>
+                </button>
             </div>
         </section>
     )

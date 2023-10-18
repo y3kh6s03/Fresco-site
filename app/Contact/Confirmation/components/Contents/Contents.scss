@@ -6,12 +6,8 @@
     margin: 0 auto 200px;
     overflow: hidden;
 
-    @include mq(lg) {
-        max-width: 850px;
-    }
-
     @include mq(xl) {
-        max-width: 960px;
+        max-width: 700px;
     }
 
 
@@ -26,6 +22,7 @@
         width: 100%;
         @extend .mb-md;
 
+
         &__item {
             width: 100%;
             display: block;
@@ -39,22 +36,24 @@
             & td {
                 display: inline-block;
                 width: 100%;
+                max-width: 650px;
                 overflow-wrap: break-word;
                 word-break: break-word;
             }
         }
     }
 
-    &__button__container{
+    &__button__container {
         display: flex;
+        padding: 10%;
         justify-content: space-between;
     }
 
 
 
-    & .return {
+    & .returnBtn {
         display: block;
-        width: 200px;
+        width: 150px;
         position: relative;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
@@ -76,19 +75,22 @@
         }
 
         @keyframes reHolizonOut {
-            0%{
+            0% {
                 transform: scaleX(10%);
                 transform-origin: left;
             }
-            50%{
+
+            50% {
                 transform: scaleX(100%);
                 transform-origin: left;
             }
-            51%{
+
+            51% {
                 transform: scaleX(100%);
                 transform-origin: right;
             }
-            100%{
+
+            100% {
                 transform: scaleX(10%);
                 transform-origin: right;
             }
@@ -96,8 +98,7 @@
 
         &__enText {
             display: block;
-            text-align: start;
-            padding-left: 20px;
+            text-align: end;
             transform: translateY(100%);
             transition: all 1s .5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
@@ -121,41 +122,44 @@
             &::before {
                 transform: rotate(325deg);
                 top: calc(50% - 3px);
-                left: 0;
+                left: -1.5px;
             }
 
             &::after {
                 transform: rotate(40deg);
                 bottom: calc(50% - 3.5px);
-                left: 0;
+                left: -1.5px;
 
             }
         }
 
-        &:hover{
+        &:hover {
 
-            & .return__enText{
+            & .returnBtn__enText {
                 transform: translateY(0);
             }
 
-            & .return__holizon{
+            & .returnBtn__holizon {
                 animation: reHolizonHover 1s cubic-bezier(0.83, 0, 0.17, 1)forwards;
             }
 
             @keyframes reHolizonHover {
-                0%{
+                0% {
                     transform: scaleX(10%);
                     transform-origin: right;
                 }
-                50%{
+
+                50% {
                     transform: scaleX(100%);
                     transform-origin: right;
                 }
-                51%{
+
+                51% {
                     transform: scaleX(100%);
                     transform-origin: left;
                 }
-                100%{
+
+                100% {
                     transform: scaleX(10%);
                     transform-origin: left;
                 }
@@ -167,5 +171,117 @@
 
 
 
-    & .submit__button {}
+    & .submitBtn {
+        background-color: transparent;
+        border-style: none;
+        width: 150px;
+        text-align: start;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        // &__jaText {}
+
+        &__bar {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $cBlack;
+            transform: scaleX(10%);
+            transform-origin: left;
+            animation: submitHolizonOut 1s cubic-bezier(0.83, 0, 0.17, 1)forwards;
+        }
+
+        @keyframes submitHolizonOut {
+            0% {
+                transform: scaleX(10%);
+                transform-origin: right;
+            }
+
+            50% {
+                transform: scaleX(100%);
+                transform-origin: right;
+            }
+
+            51% {
+                transform: scaleX(100%);
+                transform-origin: left;
+            }
+
+            100% {
+                transform: scaleX(10%);
+                transform-origin: left;
+            }
+        }
+
+        &__enText {
+            display: block;
+            transform: translateY(100%);
+            transition: all 1s .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+
+        &__arrow {
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+
+            &::before,
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 10px;
+                height: 1px;
+                background-color: $cBlack;
+                position: absolute;
+            }
+
+            &::before {
+                transform: rotate(40deg);
+                top: calc(50% - 4px);
+                right: -1px;
+            }
+
+            &::after {
+                transform: rotate(325deg);
+                bottom: calc(50% - 3.5px);
+                right: -1px;
+
+            }
+        }
+
+        &:hover {
+            & .submitBtn {
+                &__bar {
+                    animation: submitHolizonHover 1s cubic-bezier(0.83, 0, 0.17, 1)forwards;
+                }
+
+                &__enText {
+                    transform: translateY(0);
+                }
+
+                @keyframes submitHolizonHover {
+                    0% {
+                        transform: scaleX(10%);
+                        transform-origin: left;
+                    }
+
+                    50% {
+                        transform: scaleX(100%);
+                        transform-origin: left;
+                    }
+
+                    51% {
+                        transform: scaleX(100%);
+                        transform-origin: right;
+                    }
+
+                    100% {
+                        transform: scaleX(10%);
+                        transform-origin: right;
+                    }
+                }
+            }
+        }
+    }
 }
